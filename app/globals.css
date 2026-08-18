@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply bg-crema text-[#151513] dark:bg-negro dark:text-crema transition-colors duration-300;
+}
+
+.container-cw {
+  @apply w-full max-w-[1180px] mx-auto px-6;
+}
+
+.eyebrow {
+  @apply font-mono text-xs tracking-[0.14em] uppercase text-piedra flex items-center gap-2;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 font-semibold text-sm px-7 py-4 rounded transition-transform active:scale-[0.97];
+}
+.btn-primary {
+  @apply bg-amarillo text-negro hover:bg-amarillo-600;
+}
+.btn-ghost {
+  @apply bg-transparent border border-piedra-200 text-inherit hover:border-negro dark:hover:border-crema;
+}
+.btn-inverse {
+  @apply bg-negro text-crema hover:opacity-85 dark:bg-crema dark:text-negro;
+}
