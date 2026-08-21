@@ -16,6 +16,32 @@ export default function Testimonials() {
             <span className="text-amarillo-600 dark:text-amarillo tracking-widest">★★★★★</span>
             <small className="block text-piedra mt-1">{t.testimonials.ratingSub}</small>
           </div>
+          <div className="flex gap-3 ml-auto flex-wrap">
+            <a
+              href="https://share.google/IFsEJoDSQSKKj76YD"
+              target="_blank"
+              rel="noopener"
+              className="text-xs font-semibold underline decoration-amarillo underline-offset-4"
+            >
+              Ver en Google →
+            </a>
+            <a
+              href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d28007796-Reviews-Peru_Cultour_Alternative_Tours-Cusco_Cusco_Region.html"
+              target="_blank"
+              rel="noopener"
+              className="text-xs font-semibold underline decoration-amarillo underline-offset-4"
+            >
+              TripAdvisor →
+            </a>
+            <a
+              href="https://www.instagram.com/perucultour/"
+              target="_blank"
+              rel="noopener"
+              className="text-xs font-semibold underline decoration-amarillo underline-offset-4"
+            >
+              Instagram →
+            </a>
+          </div>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
           {t.testimonials.items.map((rev) => (

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useApp } from "./Providers";
-import { SunMark } from "./Illustrations";
 
 const NAV_KEYS = ["about", "itinerary", "schedule", "tours", "gallery", "reviews", "faq", "contact"] as const;
 const NAV_HREF: Record<(typeof NAV_KEYS)[number], string> = {
@@ -28,8 +27,9 @@ export default function Header() {
         }`}
       >
         <div className="container-cw flex items-center justify-between gap-6">
-          <a href="#hero" className="flex items-center gap-2 font-serif font-bold text-xl">
-            <SunMark size={24} /> Cusco Walk
+          <a href="#hero" className="flex items-center gap-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/logo-cusco-walk.jpg" alt="Cusco Walk" className="h-10 w-10 rounded object-cover" />
           </a>
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_KEYS.map((k) => (
@@ -64,7 +64,10 @@ export default function Header() {
       {drawerOpen && (
         <div className="fixed inset-0 z-50 bg-crema dark:bg-negro p-6 flex flex-col">
           <div className="flex justify-between items-center mb-10">
-            <span className="flex items-center gap-2 font-serif font-bold text-xl"><SunMark size={22} /> Cusco Walk</span>
+            <span className="flex items-center gap-2">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/images/logo-cusco-walk.jpg" alt="Cusco Walk" className="h-9 w-9 rounded object-cover" />
+    </span>
             <button onClick={() => setDrawerOpen(false)} className="w-9 h-9 rounded-full border border-piedra-200" aria-label="Cerrar menú">✕</button>
           </div>
           <nav className="flex flex-col gap-1">

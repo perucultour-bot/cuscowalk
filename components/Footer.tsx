@@ -1,6 +1,5 @@
 "use client";
 import { useApp } from "./Providers";
-import { SunMark } from "./Illustrations";
 
 export default function Footer() {
   const { t } = useApp();
@@ -9,10 +8,51 @@ export default function Footer() {
       <div className="container-cw">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
           <div>
-            <div className="flex items-center gap-2 font-serif font-bold text-xl text-crema mb-3">
-              <SunMark size={22} /> Cusco Walk
+            <div className="flex items-center gap-2 mb-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/logo-cusco-walk.jpg" alt="Cusco Walk" className="h-10 w-10 rounded object-cover" />
             </div>
             <p className="text-sm max-w-[240px]">{t.footer.tagline}</p>
+            <div className="flex gap-2.5 mt-4">
+              <a
+                href="https://www.instagram.com/perucultour/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-amarillo hover:text-amarillo transition-colors"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6}>
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" />
+                </svg>
+              </a>
+              <a
+                href="https://share.google/IFsEJoDSQSKKj76YD"
+                target="_blank"
+                rel="noopener"
+                aria-label="Google"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-amarillo hover:text-amarillo transition-colors"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6}>
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 8v8M8 12h8" />
+                </svg>
+              </a>
+              <a
+                href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d28007796-Reviews-Peru_Cultour_Alternative_Tours-Cusco_Cusco_Region.html"
+                target="_blank"
+                rel="noopener"
+                aria-label="TripAdvisor"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-amarillo hover:text-amarillo transition-colors"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6}>
+                  <circle cx="12" cy="12" r="9" />
+                  <circle cx="9" cy="12" r="2.4" />
+                  <circle cx="15" cy="12" r="2.4" />
+                </svg>
+              </a>
+            </div>
           </div>
           <div>
             <h5 className="font-mono text-xs uppercase tracking-widest text-[#8A8474] mb-4">{t.footer.links}</h5>
@@ -38,11 +78,11 @@ export default function Footer() {
           <span>{t.footer.made}</span>
         </div>
         <div className="mt-3.5 text-[11px] text-[#5A5548]">
-          Fotos: colaboradores de{" "}
+          Fotos de Cusco Walk. Una foto de referencia del Museo del Luthier vía{" "}
           <a href="https://commons.wikimedia.org" target="_blank" rel="noopener" className="underline hover:text-amarillo">
             Wikimedia Commons
-          </a>{" "}
-          (CC BY-SA / dominio público). Ilustraciones propias de Cusco Walk.
+          </a>
+          . Ilustraciones propias de Cusco Walk.
         </div>
       </div>
     </footer>

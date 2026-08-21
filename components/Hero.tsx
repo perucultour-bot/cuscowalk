@@ -35,13 +35,10 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 bg-negro">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20Plaza%20de%20Armas%20Cusco.jpg?width=1920"
+          src="/images/plaza-de-armas-atardecer.jpg"
           alt="Plaza de Armas de Cusco"
           className="w-full h-full object-cover"
           style={{ objectPosition: "center 60%" }}
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
         />
       </div>
       <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(180deg, rgba(11,11,12,.15) 0%, rgba(11,11,12,.55) 68%, rgba(11,11,12,.92) 100%)" }} />

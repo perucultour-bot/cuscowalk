@@ -7,22 +7,21 @@ export function SunMark({ size = 26, className = "" }: { size?: number; classNam
   );
 }
 
-// Fotos reales de libre uso (Wikimedia Commons — CC BY-SA / dominio público).
-// Los índices 6 y 7 (guía con paraguas, viajeros) se quedan como ilustración
-// porque no existen fotos de stock libres apropiadas para esas escenas.
-// El índice 3 (Siete Borreguitos) usa una foto de una calle empedrada cercana
-// del mismo barrio como reemplazo temporal — no hay aún una foto de esa calle
-// exacta con licencia libre en Commons; sustitúyela por una foto propia
-// cuando la tengas. Créditos completos en el Footer.
+// Fotos reales de Cusco Walk (subidas por el cliente) para el itinerario y la
+// galería. El índice 6 (guía con paraguas) se queda como ilustración porque
+// no hay foto real todavía de un guía con el paraguas negro — en cuanto la
+// tengas, reemplaza esa línea igual que las demás. El índice 4 (Museo del
+// Luthier) sigue usando una foto libre de Wikimedia Commons como referencia
+// temporal, ya que aún no hay una foto propia de ese punto exacto.
 export const SCENE_PHOTOS: (string | null)[] = [
-  "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza%20de%20Armas%20pic%2C%20Cusco%2C%20Peru.jpg?width=900",
-  "https://commons.wikimedia.org/wiki/Special:FilePath/Calle%20Hatunrumiyoc%2C%20Cusco.jpg?width=900",
-  "https://commons.wikimedia.org/wiki/Special:FilePath/T%C3%ADpica%20Calle%20del%20Barrio%20San%20Blas%20-%20Cusco.jpg?width=900",
-  "https://commons.wikimedia.org/wiki/Special:FilePath/Calle%20Hatunrumiyoc%20del%20Cusco.jpg?width=900",
+  "/images/plaza-de-armas-atardecer.jpg",
+  "/images/hatun-rumiyoq-muro.jpg",
+  "/images/san-blas-callejon-escaleras.jpg",
+  "/images/san-blas-calle-farmacia.jpg",
   "https://commons.wikimedia.org/wiki/Special:FilePath/Cusco%20Peru-%20shop%20making%20Bandurrias.jpg?width=900",
-  "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20of%20Cusco%2C%20Peru.jpg?width=900",
+  "/images/san-cristobal-mirador-cruz.jpg",
   null,
-  null,
+  "/images/viajeros-piscina-infinita.jpg",
 ];
 
 // Renderiza la foto real con la ilustración SVG como respaldo si la imagen

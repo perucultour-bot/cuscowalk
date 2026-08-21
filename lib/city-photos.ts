@@ -1,37 +1,35 @@
-// Fotos libres de la ciudad de Cusco (Wikimedia Commons, CC BY-SA / dominio
-// público) para complementar las fotos del recorrido. Para agregar una foto
-// propia más adelante: copia uno de estos bloques, pon la URL de tu foto
-// (puede ser una ruta local como "/images/mi-foto.jpg" si la subes a
-// public/images/) y cambia el texto.
+// Fotos reales de Cusco subidas por el cliente. Para agregar una foto nueva:
+// copia uno de estos bloques, pon la ruta en /public/images/ y cambia el
+// texto — no hace falta tocar el componente.
 export const CITY_PHOTOS: { url: string; captionEs: string; captionEn: string }[] = [
   {
-    url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sacsayhuam%C3%A1n%20walls.jpg?width=900",
-    captionEs: "Sacsayhuamán, la fortaleza inca sobre la ciudad",
-    captionEn: "Sacsayhuamán, the Inca fortress above the city",
+    url: "/images/cusco-vista-aerea.jpg",
+    captionEs: "Vista aérea de Cusco, con el cerro que dice \"Viva el Perú\"",
+    captionEn: "Aerial view of Cusco, with the \"Viva el Perú\" hillside",
   },
   {
-    url: "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Cusco%20Cathedral%20(Catedral%20del%20Cuzco)%20in%20Cusco%2C%20Peru.jpg?width=900",
-    captionEs: "La Catedral de Cusco, en la Plaza de Armas",
-    captionEn: "Cusco Cathedral, at the Plaza de Armas",
+    url: "/images/qorikancha-panoramica.jpg",
+    captionEs: "El Qorikancha, el antiguo templo del sol inca",
+    captionEn: "Qorikancha, the ancient Inca temple of the sun",
   },
   {
-    url: "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado%20San%20Pedro%2C%20Cusco.jpg?width=900",
-    captionEs: "El Mercado de San Pedro, el mercado local",
-    captionEn: "San Pedro Market, the local market",
+    url: "/images/san-cristobal-mirador-lluvia.jpg",
+    captionEs: "El mirador de San Cristóbal, tras la lluvia",
+    captionEn: "The San Cristóbal viewpoint, after the rain",
   },
   {
-    url: "https://commons.wikimedia.org/wiki/Special:FilePath/Peru%20-%20Cusco%20Sacred%20Valley%20%26%20Incan%20Ruins%20016%20-%20Llamas%20grazing%20at%20Sacsaywam%C3%A1n%20(7092574401).jpg?width=900",
-    captionEs: "Llamas pastando junto a las ruinas incas",
-    captionEn: "Llamas grazing next to the Inca ruins",
+    url: "/images/mirador-plaza-armas.jpg",
+    captionEs: "La Plaza de Armas vista desde lo alto",
+    captionEn: "The Plaza de Armas seen from above",
   },
   {
-    url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cusco%20Plaza%20de%20Armas%206.jpg?width=900",
-    captionEs: "Otra vista de la Plaza de Armas",
-    captionEn: "Another view of the Plaza de Armas",
+    url: "/images/plaza-armas-pachacutec.jpg",
+    captionEs: "La estatua de Pachacútec sobre la Plaza de Armas",
+    captionEn: "The statue of Pachacútec above the Plaza de Armas",
   },
   {
-    url: "https://commons.wikimedia.org/wiki/Special:FilePath/Altstadt%20Cusco%20Peru%2070.jpg?width=900",
-    captionEs: "Calles del centro histórico de Cusco",
-    captionEn: "Streets of the historic center of Cusco",
+    url: "/images/qorikancha-atardecer.jpg",
+    captionEs: "El Qorikancha al atardecer",
+    captionEn: "Qorikancha at sunset",
   },
 ];

@@ -37,6 +37,8 @@ export default function TraditionalTours() {
                 rel="noopener"
                 className="btn btn-primary w-full mt-6"
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/whatsapp-icon.png" alt="" className="w-5 h-5" />
                 {copy.cta}
               </a>
             </div>
