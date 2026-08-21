@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { useApp } from "./Providers";
 import { SunMark } from "./Illustrations";
 
-const NAV_KEYS = ["about", "itinerary", "schedule", "gallery", "reviews", "faq", "contact"] as const;
+const NAV_KEYS = ["about", "itinerary", "schedule", "tours", "gallery", "reviews", "faq", "contact"] as const;
 const NAV_HREF: Record<(typeof NAV_KEYS)[number], string> = {
-  about: "#about", itinerary: "#itinerary", schedule: "#schedule", gallery: "#gallery", reviews: "#testimonials", faq: "#faq", contact: "#contact",
+  about: "#about", itinerary: "#itinerary", schedule: "#schedule", tours: "#tours", gallery: "#gallery", reviews: "#testimonials", faq: "#faq", contact: "#contact",
 };
 
 export default function Header() {
@@ -37,6 +37,7 @@ export default function Header() {
                 {t.nav[k]}
               </a>
             ))}
+            <a href="/blog" className="text-sm font-medium text-piedra hover:text-inherit transition-colors">Blog</a>
           </nav>
           <div className="flex items-center gap-2">
             <button
@@ -72,6 +73,7 @@ export default function Header() {
                 {t.nav[k]}
               </a>
             ))}
+            <a href="/blog" onClick={() => setDrawerOpen(false)} className="font-serif text-2xl py-3 border-b border-piedra-200">Blog</a>
             <a href="#booking" onClick={() => setDrawerOpen(false)} className="btn btn-primary mt-6">{t.nav.book}</a>
           </nav>
         </div>

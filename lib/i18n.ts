@@ -2,7 +2,7 @@ export type Lang = "es" | "en";
 
 export const dictionary = {
   es: {
-    nav: { about: "Sobre el Tour", itinerary: "Itinerario", schedule: "Horarios", gallery: "Galería", reviews: "Opiniones", faq: "Preguntas", contact: "Contacto", book: "Reservar Ahora" },
+    nav: { about: "Sobre el Tour", itinerary: "Itinerario", schedule: "Horarios", gallery: "Galería", reviews: "Opiniones", faq: "Preguntas", contact: "Contacto", book: "Reservar Ahora", tours: "Otros Tours" },
     hero: {
       badge: "★ Free Walking Tour #1 en Cusco",
       titleLine1: "Descubre Cusco",
@@ -101,7 +101,7 @@ export const dictionary = {
     },
   },
   en: {
-    nav: { about: "About the Tour", itinerary: "Itinerary", schedule: "Schedule", gallery: "Gallery", reviews: "Reviews", faq: "FAQ", contact: "Contact", book: "Book Now" },
+    nav: { about: "About the Tour", itinerary: "Itinerary", schedule: "Schedule", gallery: "Gallery", reviews: "Reviews", faq: "FAQ", contact: "Contact", book: "Book Now", tours: "Other Tours" },
     hero: {
       badge: "★ Free Walking Tour #1 in Cusco",
       titleLine1: "Discover Cusco",

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useApp } from "./Providers";
 import { Scene } from "./Illustrations";
+import CityPhotos from "./CityPhotos";
 
 export default function Gallery() {
   const { t } = useApp();
@@ -33,6 +34,7 @@ export default function Gallery() {
             </button>
           ))}
         </div>
+        <CityPhotos />
       </div>
 
       {open !== null && (

@@ -24,6 +24,7 @@ export default function Footer() {
             <h5 className="font-mono text-xs uppercase tracking-widest text-[#8A8474] mb-4">{t.footer.more}</h5>
             <a href="#gallery" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.gallery}</a>
             <a href="#testimonials" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.reviews}</a>
+            <a href="/blog" className="block text-sm mb-2.5 hover:text-amarillo">Blog</a>
             <a href="#faq" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.faq}</a>
           </div>
           <div>

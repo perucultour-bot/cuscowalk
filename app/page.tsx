@@ -13,6 +13,7 @@ import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import TraditionalTours from "@/components/TraditionalTours";
 import { useApp } from "@/components/Providers";
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
       </section>
 
       <Gallery />
+      <TraditionalTours />
       <Testimonials />
       <Faq />
       <Contact />

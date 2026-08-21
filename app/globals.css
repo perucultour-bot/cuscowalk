@@ -36,3 +36,26 @@ body {
 .btn-inverse {
   @apply bg-negro text-crema hover:opacity-85 dark:bg-crema dark:text-negro;
 }
+
+.prose-cw h2 {
+  @apply font-serif text-2xl mt-9 mb-3;
+}
+.prose-cw h3 {
+  @apply font-serif text-lg mt-7 mb-2.5;
+}
+.prose-cw p {
+  @apply mb-4;
+}
+.prose-cw ul,
+.prose-cw ol {
+  @apply mb-4 ml-5 list-disc;
+}
+.prose-cw li {
+  @apply mb-1.5;
+}
+.prose-cw a {
+  @apply underline decoration-amarillo underline-offset-4;
+}
+.prose-cw strong {
+  @apply font-bold;
+}

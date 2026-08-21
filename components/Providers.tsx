@@ -26,7 +26,7 @@ export function Providers({ children }: { children: ReactNode }) {
   const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
 
   return (
-    <AppContext.Provider value={{ lang, setLang, t: dictionary[lang], theme, toggleTheme }}>
+    <AppContext.Provider value={{ lang, setLang, t: dictionary[lang] as Dictionary, theme, toggleTheme }}>
       {children}
     </AppContext.Provider>
   );

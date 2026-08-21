@@ -4,7 +4,7 @@ import { useApp } from "./Providers";
 export default function Contact() {
   const { t } = useApp();
   const cards = [
-    { h: t.contact.wa, p: "+51 984 000 000" },
+    { h: t.contact.wa, p: "+51 900 801 969" },
     { h: t.contact.email, p: "perucultour@gmail.com" },
     { h: t.contact.hours, p: "10:30 AM · 1:00 PM · 3:30 PM" },
     { h: t.contact.meet, p: t.contact.meetDesc },
