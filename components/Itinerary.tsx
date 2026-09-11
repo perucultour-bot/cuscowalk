@@ -39,7 +39,12 @@ export default function Itinerary() {
                   <p className="text-piedra text-sm mt-2 max-w-md">{stop.d}</p>
                 </div>
                 <div className="aspect-[4/3] rounded overflow-hidden border border-piedra-200 dark:border-negro-800">
-                  <Scene index={i} />
+                  {i === 6 ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src="/images/brindis-pisco-sour.webp" alt="" className="w-full h-full object-cover" loading="lazy" />
+                  ) : (
+                    <Scene index={i} />
+                  )}
                 </div>
               </div>
             </motion.div>

@@ -37,8 +37,7 @@ export default function Hero() {
         <img
           src="/images/plaza-de-armas-atardecer.webp"
           alt="Plaza de Armas de Cusco"
-          className="w-full h-full object-cover"
-          style={{ objectPosition: "center 60%" }}
+          className="w-full h-full object-cover object-[68%_55%] sm:object-[center_58%]"
           fetchPriority="high"
           loading="eager"
         />
