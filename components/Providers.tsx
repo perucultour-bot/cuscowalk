@@ -14,7 +14,7 @@ type Ctx = {
 const AppContext = createContext<Ctx | null>(null);
 
 export function Providers({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("es");
+  const [lang, setLang] = useState<Lang>("en");
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
