@@ -46,35 +46,7 @@ Para reemplazar cualquiera de estas fotos por las tuyas propias (muy recomendabl
 
 Nota de atribución: las licencias CC BY-SA de Wikimedia piden dar crédito — ya está añadido un aviso en el `Footer`. Si sustituyes todas las fotos por material propio, puedes quitar esa línea.
 
-## 6. Cómo agregar un artículo nuevo al blog (sin tocar código)
-
-Los artículos del blog son archivos de texto simple (formato Markdown) dentro de la carpeta `content/blog/`. Para agregar uno nuevo:
-
-1. En GitHub, entra a la carpeta `content/blog/`.
-2. Haz clic en "Add file" → "Create new file".
-3. Nómbralo así, con guiones y sin espacios ni tildes, terminando en `.md`: por ejemplo `que-llevar-a-machu-picchu.md`.
-4. Copia y pega esta plantilla al inicio, y escribe tu artículo debajo con el mismo estilo (puedes usar `## ` para subtítulos, lineas en blanco entre párrafos, y `- ` para viñetas):
-
-```
----
-title: "Título de tu artículo"
-date: "2026-08-25"
-excerpt: "Una o dos frases resumiendo el artículo, aparece en la lista del blog."
----
-
-Aquí escribes el contenido normal, en párrafos.
-
-## Un subtítulo
-
-- Una viñeta
-- Otra viñeta
-```
-
-5. Baja hasta "Commit changes" y guarda. Vercel publica el artículo solo en 1-2 minutos, ya aparece automáticamente en `/blog`.
-
-No necesitas registrar el archivo en ningún otro lado — el sitio lee automáticamente todo lo que haya en `content/blog/`.
-
-## 7. Tours tradicionales y reservas por WhatsApp
+## 6. Tours tradicionales y reservas por WhatsApp
 
 Los tours pagados (City Tour, Valle Sagrado, Rainbow Mountain) están definidos en `lib/tours.ts`. Cada uno reserva directo por WhatsApp al número configurado en `WHATSAPP_NUMBER` en ese mismo archivo. Para agregar un tour nuevo, copia uno de los bloques existentes en ese archivo y cambia los datos — no hace falta tocar el componente.
 

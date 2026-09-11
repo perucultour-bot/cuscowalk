@@ -35,10 +35,12 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 bg-negro">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/plaza-de-armas-atardecer.jpg"
+          src="/images/plaza-de-armas-atardecer.webp"
           alt="Plaza de Armas de Cusco"
           className="w-full h-full object-cover"
           style={{ objectPosition: "center 60%" }}
+          fetchPriority="high"
+          loading="eager"
         />
       </div>
       <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(180deg, rgba(11,11,12,.15) 0%, rgba(11,11,12,.55) 68%, rgba(11,11,12,.92) 100%)" }} />
@@ -52,7 +54,7 @@ export default function Hero() {
         <span className="inline-flex items-center gap-2 bg-amarillo/10 border border-amarillo/40 text-amarillo font-mono text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-6">
           {t.hero.badge}
         </span>
-        <h1 className="font-serif font-semibold text-[13vw] sm:text-7xl lg:text-8xl leading-[0.98] max-w-4xl">
+        <h1 className="font-serif font-semibold text-[9vw] sm:text-5xl lg:text-6xl leading-[1.08] max-w-2xl">
           {t.hero.titleLine1}
           <br />
           <em className="italic text-amarillo">{t.hero.titleEm}</em>

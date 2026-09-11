@@ -5,7 +5,7 @@ import { useApp } from "./Providers";
 
 const NAV_KEYS = ["about", "itinerary", "schedule", "tours", "gallery", "reviews", "faq", "contact"] as const;
 const NAV_HREF: Record<(typeof NAV_KEYS)[number], string> = {
-  about: "#about", itinerary: "#itinerary", schedule: "#schedule", tours: "#tours", gallery: "#gallery", reviews: "#testimonials", faq: "#faq", contact: "#contact",
+  about: "/#about", itinerary: "/#itinerary", schedule: "/#schedule", tours: "/#tours", gallery: "/#gallery", reviews: "/#testimonials", faq: "/#faq", contact: "/#contact",
 };
 
 export default function Header() {
@@ -27,7 +27,7 @@ export default function Header() {
         }`}
       >
         <div className="container-cw flex items-center justify-between gap-6">
-          <a href="#hero" className="flex items-center gap-2">
+          <a href="/#hero" className="flex items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/logo-cusco-walk.jpg" alt="Cusco Walk" className="h-10 w-10 rounded object-cover" />
           </a>
@@ -51,7 +51,7 @@ export default function Header() {
             <button onClick={toggleTheme} className="w-9 h-9 rounded-full border border-piedra-200 flex items-center justify-center" aria-label="Cambiar tema">
               {theme === "dark" ? "☀" : "☾"}
             </button>
-            <a href="#booking" className="btn btn-primary btn-sm hidden lg:inline-flex !py-2.5 !px-5 !text-xs">
+            <a href="/#booking" className="btn btn-primary btn-sm hidden lg:inline-flex !py-2.5 !px-5 !text-xs">
               {t.nav.book}
             </a>
             <button className="lg:hidden w-9 h-9 rounded-full border border-piedra-200 flex items-center justify-center" onClick={() => setDrawerOpen(true)} aria-label="Abrir menú">
@@ -77,7 +77,7 @@ export default function Header() {
               </a>
             ))}
             <a href="/blog" onClick={() => setDrawerOpen(false)} className="font-serif text-2xl py-3 border-b border-piedra-200">Blog</a>
-            <a href="#booking" onClick={() => setDrawerOpen(false)} className="btn btn-primary mt-6">{t.nav.book}</a>
+            <a href="/#booking" onClick={() => setDrawerOpen(false)} className="btn btn-primary mt-6">{t.nav.book}</a>
           </nav>
         </div>
       )}

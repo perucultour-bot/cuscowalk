@@ -14,14 +14,14 @@ export function SunMark({ size = 26, className = "" }: { size?: number; classNam
 // Luthier) sigue usando una foto libre de Wikimedia Commons como referencia
 // temporal, ya que aún no hay una foto propia de ese punto exacto.
 export const SCENE_PHOTOS: (string | null)[] = [
-  "/images/plaza-de-armas-atardecer.jpg",
-  "/images/hatun-rumiyoq-muro.jpg",
-  "/images/san-blas-callejon-escaleras.jpg",
-  "/images/san-blas-calle-farmacia.jpg",
+  "/images/plaza-de-armas-atardecer.webp",
+  "/images/hatun-rumiyoq-muro.webp",
+  "/images/san-blas-callejon-escaleras.webp",
+  "/images/san-blas-calle-farmacia.webp",
   "https://commons.wikimedia.org/wiki/Special:FilePath/Cusco%20Peru-%20shop%20making%20Bandurrias.jpg?width=900",
-  "/images/san-cristobal-barrio-escaleras.jpg",
+  "/images/san-cristobal-barrio-escaleras.webp",
   null,
-  "/images/viajeros-piscina-infinita.jpg",
+  "/images/viajeros-piscina-infinita.webp",
 ];
 
 // Renderiza la foto real con la ilustración SVG como respaldo si la imagen

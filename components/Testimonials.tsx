@@ -34,7 +34,7 @@ export default function Testimonials() {
               TripAdvisor →
             </a>
             <a
-              href="https://www.instagram.com/perucultour/"
+              href="https://www.instagram.com/cuscowalk/"
               target="_blank"
               rel="noopener"
               className="text-xs font-semibold underline decoration-amarillo underline-offset-4"

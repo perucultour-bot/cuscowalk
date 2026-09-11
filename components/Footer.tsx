@@ -15,7 +15,7 @@ export default function Footer() {
             <p className="text-sm max-w-[240px]">{t.footer.tagline}</p>
             <div className="flex gap-2.5 mt-4">
               <a
-                href="https://www.instagram.com/perucultour/"
+                href="https://www.instagram.com/cuscowalk/"
                 target="_blank"
                 rel="noopener"
                 aria-label="Instagram"
@@ -56,16 +56,16 @@ export default function Footer() {
           </div>
           <div>
             <h5 className="font-mono text-xs uppercase tracking-widest text-[#8A8474] mb-4">{t.footer.links}</h5>
-            <a href="#about" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.about}</a>
-            <a href="#itinerary" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.itinerary}</a>
-            <a href="#booking" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.book}</a>
+            <a href="/#about" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.about}</a>
+            <a href="/#itinerary" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.itinerary}</a>
+            <a href="/#booking" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.book}</a>
           </div>
           <div>
             <h5 className="font-mono text-xs uppercase tracking-widest text-[#8A8474] mb-4">{t.footer.more}</h5>
-            <a href="#gallery" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.gallery}</a>
-            <a href="#testimonials" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.reviews}</a>
+            <a href="/#gallery" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.gallery}</a>
+            <a href="/#testimonials" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.reviews}</a>
+            <a href="/#faq" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.faq}</a>
             <a href="/blog" className="block text-sm mb-2.5 hover:text-amarillo">Blog</a>
-            <a href="#faq" className="block text-sm mb-2.5 hover:text-amarillo">{t.nav.faq}</a>
           </div>
           <div>
             <h5 className="font-mono text-xs uppercase tracking-widest text-[#8A8474] mb-4">{t.footer.legal}</h5>

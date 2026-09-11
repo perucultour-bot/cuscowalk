@@ -32,6 +32,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             className="prose-cw mt-8 text-[15.5px] leading-relaxed"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
+          <Link href="/" className="inline-block mt-10 text-sm font-semibold text-amarillo-600 dark:text-amarillo hover:underline">
+            ← Volver a la página de inicio
+          </Link>
         </div>
       </main>
       <Footer />
