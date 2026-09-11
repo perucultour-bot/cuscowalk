@@ -59,3 +59,6 @@ body {
 .prose-cw strong {
   @apply font-bold;
 }
+.prose-cw img {
+  @apply rounded my-6 w-full object-cover border border-piedra-200 dark:border-negro-800;
+}

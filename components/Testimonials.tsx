@@ -11,7 +11,7 @@ export default function Testimonials() {
           <h2 className="mt-3 text-4xl lg:text-5xl">{t.testimonials.title}</h2>
         </div>
         <div className="flex items-center gap-5 p-7 border border-piedra-200 dark:border-negro-800 rounded mb-10 bg-white dark:bg-negro-800 flex-wrap">
-          <span className="font-serif text-5xl">4.9</span>
+          <span className="font-serif text-5xl">5.0</span>
           <div>
             <span className="text-amarillo-600 dark:text-amarillo tracking-widest">★★★★★</span>
             <small className="block text-piedra mt-1">{t.testimonials.ratingSub}</small>

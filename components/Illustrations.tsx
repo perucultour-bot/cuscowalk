@@ -18,10 +18,11 @@ export const SCENE_PHOTOS: (string | null)[] = [
   "/images/hatun-rumiyoq-muro.webp",
   "/images/san-blas-callejon-escaleras.webp",
   "/images/san-blas-calle-farmacia.webp",
-  "https://commons.wikimedia.org/wiki/Special:FilePath/Cusco%20Peru-%20shop%20making%20Bandurrias.jpg?width=900",
-  "/images/san-cristobal-barrio-escaleras.webp",
+  "/images/luthier-guia-musica.webp",
+  "/images/acueducto-colonial.webp",
+  "/images/huaca-muro-inca.webp",
+  "/images/mirador-plaza-armas.webp",
   null,
-  "/images/viajeros-piscina-infinita.webp",
 ];
 
 // Renderiza la foto real con la ilustración SVG como respaldo si la imagen
@@ -125,6 +126,16 @@ export const SCENES = [
         <circle cx="142" cy="70" r="14" /><rect x="128" y="86" width="28" height="40" rx="6" />
       </g>
       <circle cx="100" cy="60" r="16" fill="#E3BE00" /><rect x="84" y="78" width="32" height="46" rx="6" fill="#E3BE00" />
+    </svg>
+  ),
+  // 8 stone wall (huaca / aqueduct fallback)
+  (
+    <svg viewBox="0 0 200 150" key="s8"><rect width="200" height="150" className="fill-crema-600 dark:fill-negro-800" />
+      <g fill="none" className="stroke-negro dark:stroke-crema" strokeWidth={2}>
+        <path d="M5 120 L5 90 L35 82 L65 92 L65 120" />
+        <path d="M65 120 L65 86 L100 74 L135 92 L135 120" />
+        <path d="M135 120 L135 88 L165 78 L195 94 L195 120" />
+      </g>
     </svg>
   ),
 ];

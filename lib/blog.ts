@@ -11,6 +11,8 @@ export type PostMeta = {
   date: string;
   excerpt: string;
   cover?: string;
+  lang: "es" | "en";
+  translationSlug?: string;
 };
 
 // Lee todos los archivos .md de /content/blog y devuelve sus metadatos,
@@ -31,6 +33,8 @@ export function getAllPosts(): PostMeta[] {
       date: data.date ?? "",
       excerpt: data.excerpt ?? "",
       cover: data.cover ?? undefined,
+      lang: (data.lang === "en" ? "en" : "es") as "es" | "en",
+      translationSlug: data.translationSlug ?? undefined,
     } as PostMeta;
   });
 
@@ -54,6 +58,8 @@ export function getPostBySlug(slug: string): (PostMeta & { html: string }) | nul
     date: data.date ?? "",
     excerpt: data.excerpt ?? "",
     cover: data.cover ?? undefined,
+    lang: (data.lang === "en" ? "en" : "es") as "es" | "en",
+    translationSlug: data.translationSlug ?? undefined,
     html,
   };
 }

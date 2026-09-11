@@ -2,13 +2,13 @@ export type Lang = "es" | "en";
 
 export const dictionary = {
   es: {
-    nav: { about: "Sobre el Tour", itinerary: "Itinerario", schedule: "Horarios", gallery: "Galería", reviews: "Opiniones", faq: "Preguntas", contact: "Contacto", book: "Reservar Ahora", tours: "Otros Tours" },
+    nav: { about: "Sobre el Tour", itinerary: "Itinerario", schedule: "Horarios", gallery: "Galería", reviews: "Opiniones", faq: "Preguntas", contact: "Contacto", book: "Reservar Gratis", tours: "Otros Tours" },
     hero: {
       badge: "★ Free Walking Tour #1 en Cusco",
       titleLine1: "Únete al mejor Walking Tour de Cusco y",
       titleEm: "vive su historia en cada paso",
       sub: "Explora la ciudad con nuestros guías locales y vive una experiencia auténtica, totalmente gratuita.",
-      cta1: "Reservar Ahora",
+      cta1: "Reservar Gratis",
       cta2: "Ver el Recorrido",
       stat1: "viajeros ya exploraron Cusco con nosotros",
       stat2: "calificación promedio en cientos de reseñas",
@@ -38,6 +38,8 @@ export const dictionary = {
         { t: "Barrio de San Blas", d: "Calles coloniales, miradores escondidos, historia de artesanos." },
         { t: "Calle Siete Borreguitos", d: "Uno de los rincones más fotografiados de Cusco." },
         { t: "Museo del Luthier", d: "Instrumentos musicales tradicionales andinos." },
+        { t: "Acueducto Colonial", d: "Un antiguo acueducto de piedra que todavía lleva agua por las calles altas de Cusco." },
+        { t: "Huaca", d: "Un lugar ceremonial inca (huaca), sagrado para el culto a la tierra y el agua." },
         { t: "Barrio de San Cristóbal", d: "Uno de los mejores miradores panorámicos de la ciudad." },
         { t: "Final del tour", d: "Degustación de una bebida tradicional peruana, todos juntos." },
       ],
@@ -72,11 +74,11 @@ export const dictionary = {
       ],
     },
     testimonials: {
-      eyebrow: "Opiniones", title: "Lo que dicen quienes ya caminaron con nosotros", ratingSub: "basado en más de 300 reseñas de viajeros",
+      eyebrow: "Opiniones", title: "Lo que dicen quienes ya caminaron con nosotros", ratingSub: "basado en reseñas reales de viajeros en TripAdvisor",
       items: [
-        { n: "Camila R.", c: "Chile", t: "El mejor tour gratuito que hice en Sudamérica. Nuestro guía sabía absolutamente todo sobre Cusco." },
-        { n: "Daniel W.", c: "Estados Unidos", t: "Súper bien organizado y el punto de encuentro fue clarísimo gracias al paraguas negro." },
-        { n: "Sophie L.", c: "Francia", t: "San Blas al atardecer con este grupo fue mágico. La degustación final fue un lindo detalle." },
+        { n: "Treti", c: "Miami, Estados Unidos", t: "Nuestro guía fue increíblemente paciente y supo mucho — nunca apuró al grupo. Una gran forma de conocer la historia real de la ciudad." },
+        { n: "Sandra A.", c: "Vía TripAdvisor", t: "Un guía excelente — pudimos conocer Cusco de una forma distinta. Describió las calles y la historia con verdadera pasión y conocimiento." },
+        { n: "Gio C.", c: "Perth, Australia", t: "Guía con inglés fluido, ¡y el pisco sour del final estuvo delicioso! Recomiendo este tour a cualquiera." },
       ],
     },
     faq: {
@@ -103,13 +105,13 @@ export const dictionary = {
     },
   },
   en: {
-    nav: { about: "About the Tour", itinerary: "Itinerary", schedule: "Schedule", gallery: "Gallery", reviews: "Reviews", faq: "FAQ", contact: "Contact", book: "Book Now", tours: "Other Tours" },
+    nav: { about: "About the Tour", itinerary: "Itinerary", schedule: "Schedule", gallery: "Gallery", reviews: "Reviews", faq: "FAQ", contact: "Contact", book: "Book Free Now", tours: "Other Tours" },
     hero: {
       badge: "★ Free Walking Tour #1 in Cusco",
       titleLine1: "Join the Best Walking Tour in Cusco and",
       titleEm: "Live Its History in Every Step",
       sub: "Explore the city with our local guides and experience something authentic — completely free.",
-      cta1: "Book Now",
+      cta1: "Book Free Now",
       cta2: "See the Route",
       stat1: "travelers have already explored Cusco with us",
       stat2: "average rating across hundreds of reviews",
@@ -139,6 +141,8 @@ export const dictionary = {
         { t: "San Blas Neighborhood", d: "Colonial streets, hidden lookouts, and the artisans' quarter story." },
         { t: "Siete Borreguitos Street", d: "One of Cusco's most photographed corners." },
         { t: "Luthier Museum", d: "Traditional Andean musical instruments." },
+        { t: "Colonial Aqueduct", d: "An old stone aqueduct that still carries water through Cusco's upper streets." },
+        { t: "Huaca", d: "An Inca ceremonial site (huaca), sacred to the worship of earth and water." },
         { t: "San Cristóbal Neighborhood", d: "One of the best panoramic viewpoints in the city." },
         { t: "End of the tour", d: "A tasting of a traditional Peruvian drink, all together." },
       ],
@@ -173,11 +177,11 @@ export const dictionary = {
       ],
     },
     testimonials: {
-      eyebrow: "Reviews", title: "What people say after walking with us", ratingSub: "based on 300+ traveler reviews",
+      eyebrow: "Reviews", title: "What people say after walking with us", ratingSub: "based on real traveler reviews on TripAdvisor",
       items: [
-        { n: "Camila R.", c: "Chile", t: "Best free tour I took in South America. Our guide knew absolutely everything about Cusco." },
-        { n: "Daniel W.", c: "United States", t: "Super well organized, and the meeting point was crystal clear thanks to the black umbrella." },
-        { n: "Sophie L.", c: "France", t: "San Blas at sunset with this group was magical. The closing tasting was a lovely touch." },
+        { n: "Treti", c: "Miami, USA", t: "Our guide was incredibly patient and knowledgeable, and never rushed the group — a great way to really learn the city's history." },
+        { n: "Sandra A.", c: "Via TripAdvisor", t: "An excellent guide — we got to see Cusco in a whole new way. He described the streets and history with real passion and knowledge." },
+        { n: "Gio C.", c: "Perth, Australia", t: "Fluent English-speaking guide, and the pisco sour at the end was delicious. I'd recommend this tour to anyone." },
       ],
     },
     faq: {
