@@ -8,6 +8,7 @@ const workSans = Work_Sans({ subsets: ["latin"], variable: "--font-work-sans", w
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains", weight: ["400", "500"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cuscowalk.com"),
   title: "Cusco Walk — Free Walking Tour en Cusco | Descubre Cusco como un Local",
   description:
     "Free Walking Tour en Cusco con guías locales. Recorre la Plaza de Armas, San Blas, Hatun Rumiyoq y San Cristóbal en un tour a pie gratuito de 2 horas. Reserva en menos de un minuto.",
@@ -15,12 +16,14 @@ export const metadata: Metadata = {
     "Free Walking Tour Cusco", "Walking Tour Cusco", "Cusco Walking Tour", "Best Walking Tour Cusco",
     "Free Tour Cusco", "Cusco City Tour", "Cusco Local Guide", "Walking Tour Peru",
   ],
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "Cusco Walk",
     title: "Cusco Walk — Free Walking Tour en Cusco",
     description: "Explora la ciudad con guías locales apasionados. Tour a pie gratuito de 2 horas por el corazón histórico de Cusco.",
     locale: "es_PE",
+    url: "/",
   },
   twitter: { card: "summary_large_image" },
   themeColor: "#0B0B0C",

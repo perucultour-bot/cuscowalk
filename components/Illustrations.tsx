@@ -19,7 +19,7 @@ export const SCENE_PHOTOS: (string | null)[] = [
   "/images/san-blas-callejon-escaleras.jpg",
   "/images/san-blas-calle-farmacia.jpg",
   "https://commons.wikimedia.org/wiki/Special:FilePath/Cusco%20Peru-%20shop%20making%20Bandurrias.jpg?width=900",
-  "/images/san-cristobal-mirador-cruz.jpg",
+  "/images/san-cristobal-barrio-escaleras.jpg",
   null,
   "/images/viajeros-piscina-infinita.jpg",
 ];

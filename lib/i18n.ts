@@ -23,7 +23,9 @@ export const dictionary = {
         { h: "Duración", p: "Aproximadamente 2 horas de recorrido a pie." },
         { h: "Punto de encuentro", p: "Plaza de Armas de Cusco, en la Fuente Inca." },
         { h: "¿Cómo reconozco a mi guía?", p: "Nuestro guía siempre lleva un paraguas negro — imposible perderlo entre la multitud." },
-        { h: "Degustación final", p: "Cerramos el tour con una bebida tradicional local." },
+        { h: "Pequeños detalles en el camino", p: "Un llavero de llama de regalo y, al final, una degustación de bebida tradicional local." },
+        { h: "Guías profesionales y locales", p: "Profesionales en ciencias sociales, nacidos en Cusco, con conocimiento real de su historia y cultura." },
+        { h: "Un solo idioma por tour", p: "Cada grupo recibe el recorrido en un único idioma — español o inglés, sin mezclarlos." },
       ],
     },
     itinerary: {
@@ -122,7 +124,9 @@ export const dictionary = {
         { h: "Duration", p: "About 2 hours of walking." },
         { h: "Meeting point", p: "Plaza de Armas, Cusco, at the Inca Fountain." },
         { h: "How do I spot my guide?", p: "Our guide always carries a black umbrella — impossible to miss in the crowd." },
-        { h: "Closing tasting", p: "We end the tour with a traditional local drink." },
+        { h: "Little details along the way", p: "A free llama keychain, and a traditional local drink tasting at the end." },
+        { h: "Professional, local guides", p: "Social science professionals, born in Cusco, with real knowledge of its history and culture." },
+        { h: "One language per tour", p: "Each group gets the tour in a single language — Spanish or English, never mixed." },
       ],
     },
     itinerary: {

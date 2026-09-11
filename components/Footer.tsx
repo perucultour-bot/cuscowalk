@@ -2,7 +2,7 @@
 import { useApp } from "./Providers";
 
 export default function Footer() {
-  const { t } = useApp();
+  const { t, lang } = useApp();
   return (
     <footer className="bg-negro text-[#D8D3C4] pt-16 pb-7">
       <div className="container-cw">
@@ -71,6 +71,20 @@ export default function Footer() {
             <h5 className="font-mono text-xs uppercase tracking-widest text-[#8A8474] mb-4">{t.footer.legal}</h5>
             <a href="#" className="block text-sm mb-2.5 hover:text-amarillo">{t.footer.privacy}</a>
             <a href="#" className="block text-sm mb-2.5 hover:text-amarillo">{t.footer.terms}</a>
+          </div>
+        </div>
+        <div className="flex items-center gap-4 py-6 border-t border-white/10 flex-wrap">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/gercetur-logo.png" alt="GERCETUR Cusco" className="h-10 w-auto bg-white rounded p-1.5" />
+          <div>
+            <p className="text-sm font-semibold text-crema">
+              {lang === "es" ? "Guías oficiales y verificados en Cusco" : "Official, verified guides in Cusco"}
+            </p>
+            <p className="text-xs text-[#8A8474]">
+              {lang === "es"
+                ? "Registrados ante GERCETUR — Gerencia Regional de Comercio Exterior, Turismo y Artesanía"
+                : "Registered with GERCETUR — Regional Bureau of Foreign Trade, Tourism and Crafts"}
+            </p>
           </div>
         </div>
         <div className="flex justify-between items-center pt-6 text-xs text-[#7A7466] flex-wrap gap-3">

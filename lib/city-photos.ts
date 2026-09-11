@@ -32,4 +32,34 @@ export const CITY_PHOTOS: { url: string; captionEs: string; captionEn: string }[
     captionEs: "El Qorikancha al atardecer",
     captionEn: "Qorikancha at sunset",
   },
+  {
+    url: "/images/cusco-atardecer-plaza.jpg",
+    captionEs: "Cusco al anochecer, con la Plaza de Armas iluminada",
+    captionEn: "Cusco at dusk, with the Plaza de Armas lit up",
+  },
+  {
+    url: "/images/alpacas-valle.jpg",
+    captionEs: "Alpacas pastando en el campo cerca de Cusco",
+    captionEn: "Alpacas grazing in the countryside near Cusco",
+  },
+  {
+    url: "/images/jugueria-mercado.jpg",
+    captionEs: "Una juguería tradicional en el mercado local",
+    captionEn: "A traditional juice stand at the local market",
+  },
+  {
+    url: "/images/mercado-textiles.jpg",
+    captionEs: "Textiles andinos coloridos en el mercado artesanal",
+    captionEn: "Colorful Andean textiles at the craft market",
+  },
+  {
+    url: "/images/ventana-piedra-inca.jpg",
+    captionEs: "El detalle de la piedra inca, perfectamente tallada",
+    captionEn: "Inca stonework detail, perfectly carved",
+  },
+  {
+    url: "/images/festividad-local-cusco.jpg",
+    captionEs: "Una festividad tradicional en las calles de Cusco",
+    captionEn: "A traditional festival in the streets of Cusco",
+  },
 ];

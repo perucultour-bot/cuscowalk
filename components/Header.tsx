@@ -45,8 +45,8 @@ export default function Header() {
               className="font-mono text-xs border border-piedra-200 rounded-full flex overflow-hidden"
               aria-label="Cambiar idioma"
             >
-              <span className={`px-2.5 py-1.5 ${lang === "es" ? "bg-negro text-crema dark:bg-crema dark:text-negro" : ""}`}>ES</span>
-              <span className={`px-2.5 py-1.5 ${lang === "en" ? "bg-negro text-crema dark:bg-crema dark:text-negro" : ""}`}>EN</span>
+              <span className={`flex items-center gap-1.5 px-2.5 py-1.5 ${lang === "es" ? "bg-negro text-crema dark:bg-crema dark:text-negro" : ""}`}>🇪🇸 ES</span>
+              <span className={`flex items-center gap-1.5 px-2.5 py-1.5 ${lang === "en" ? "bg-negro text-crema dark:bg-crema dark:text-negro" : ""}`}>🇬🇧 EN</span>
             </button>
             <button onClick={toggleTheme} className="w-9 h-9 rounded-full border border-piedra-200 flex items-center justify-center" aria-label="Cambiar tema">
               {theme === "dark" ? "☀" : "☾"}
