@@ -15,6 +15,7 @@ export function SunMark({ size = 26, className = "" }: { size?: number; classNam
 // temporal, ya que aún no hay una foto propia de ese punto exacto.
 export const SCENE_PHOTOS: (string | null)[] = [
   "/images/plaza-de-armas-atardecer.webp",
+  "/images/qorikancha-panoramica.webp",
   "/images/hatun-rumiyoq-muro.webp",
   "/images/san-blas-callejon-escaleras.webp",
   "/images/san-blas-calle-farmacia.webp",

@@ -3,18 +3,30 @@
 import { useApp } from "./Providers";
 
 const SLOTS = [
-  { time: "10:30", suffix: "AM", full: "10:30 AM" },
-  { time: "1:00", suffix: "PM", full: "1:00 PM" },
-  { time: "3:30", suffix: "PM", full: "3:30 PM" },
+  {
+    time: "10:30", suffix: "AM", full: "10:30 AM",
+    noteEs: "Incluye los miradores de San Blas y San Cristóbal, el acueducto colonial y la huaca inca.",
+    noteEn: "Includes the San Blas and San Cristóbal viewpoints, the colonial aqueduct and the Inca huaca.",
+  },
+  {
+    time: "1:00", suffix: "PM", full: "1:00 PM",
+    noteEs: "Incluye el Qorikancha (por fuera) y el taller del luthier.",
+    noteEn: "Includes Qorikancha (from outside) and the luthier's workshop.",
+  },
+  {
+    time: "3:30", suffix: "PM", full: "3:30 PM",
+    noteEs: "Incluye el Qorikancha (por fuera) y el taller del luthier.",
+    noteEn: "Includes Qorikancha (from outside) and the luthier's workshop.",
+  },
 ];
 
 export default function Schedule({ onPick }: { onPick: (slot: string) => void }) {
-  const { t } = useApp();
+  const { t, lang } = useApp();
 
   return (
-    <section id="schedule" className="py-24 lg:py-28">
+    <section id="schedule" className="py-14 sm:py-20 lg:py-28">
       <div className="container-cw">
-        <div className="max-w-xl mb-14">
+        <div className="max-w-xl mb-8 sm:mb-14">
           <span className="eyebrow">{t.schedule.eyebrow}</span>
           <h2 className="mt-3 text-4xl lg:text-5xl">{t.schedule.title}</h2>
         </div>
@@ -25,6 +37,7 @@ export default function Schedule({ onPick }: { onPick: (slot: string) => void })
                 {s.time}
                 <span className="text-base ml-1">{s.suffix}</span>
               </span>
+              <p className="text-xs text-piedra mt-3 leading-relaxed">{lang === "es" ? s.noteEs : s.noteEn}</p>
               <a
                 href="#booking"
                 onClick={() => onPick(s.full)}

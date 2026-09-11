@@ -36,7 +36,7 @@ const jsonLd = {
   description: "Tour a pie gratuito de 2 horas por el centro histórico de Cusco, incluyendo Plaza de Armas, Hatun Rumiyoq, San Blas y San Cristóbal.",
   provider: { "@type": "TravelAgency", name: "Cusco Walk", email: "perucultour@gmail.com", areaServed: "Cusco, Peru" },
   offers: { "@type": "Offer", price: "0", priceCurrency: "PEN", availability: "https://schema.org/InStock" },
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "6" },
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "61" },
 };
 
 const faqJsonLd = {
@@ -48,9 +48,10 @@ const faqJsonLd = {
     { q: "Where do we meet?", a: "At the Plaza de Armas in Cusco, at the Inca Fountain." },
     { q: "How do I recognize the guide?", a: "They always carry a black umbrella." },
     { q: "Do I need to book?", a: "Yes, we recommend booking ahead." },
-    { q: "Can I book the same day?", a: "Often yes, depending on availability." },
+    { q: "Can I book the same day?", a: "Yes, you can always book the same day — our team is always ready to confirm availability." },
     { q: "What should I bring?", a: "Comfortable clothes, walking shoes, sunscreen and water." },
     { q: "Do you take groups?", a: "Yes. If your group is over 10 people, message us ahead." },
+    { q: "Do you take private groups?", a: "Yes, we accept private groups with advance notice — message us on WhatsApp to arrange the date and time." },
   ].map(({ q, a }) => ({
     "@type": "Question",
     name: q,

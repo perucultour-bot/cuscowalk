@@ -16,7 +16,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 lg:py-28">
+    <section id="about" className="py-14 sm:py-20 lg:py-28">
       <div className="container-cw grid lg:grid-cols-[1.1fr_1fr] gap-14">
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
           <span className="eyebrow">{t.about.eyebrow}</span>

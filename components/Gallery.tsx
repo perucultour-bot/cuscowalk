@@ -10,9 +10,9 @@ export default function Gallery() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="gallery" className="py-24 lg:py-28">
+    <section id="gallery" className="py-14 sm:py-20 lg:py-28">
       <div className="container-cw">
-        <div className="max-w-xl mb-14">
+        <div className="max-w-xl mb-8 sm:mb-14">
           <span className="eyebrow">{t.gallery.eyebrow}</span>
           <h2 className="mt-3 text-4xl lg:text-5xl">{t.gallery.title}</h2>
         </div>

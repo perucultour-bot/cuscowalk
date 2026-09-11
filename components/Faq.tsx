@@ -6,7 +6,7 @@ export default function Faq() {
   const { t } = useApp();
   const [openIdx, setOpenIdx] = useState<number | null>(null);
   return (
-    <section id="faq" className="py-24 lg:py-28">
+    <section id="faq" className="py-14 sm:py-20 lg:py-28">
       <div className="container-cw">
         <div className="max-w-xl mb-10">
           <span className="eyebrow">{t.faq.eyebrow}</span>

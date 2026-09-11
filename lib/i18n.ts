@@ -34,6 +34,7 @@ export const dictionary = {
       sub: "Cada parada tiene una historia — incas, coloniales, o simplemente el lugar más fotografiado de la ciudad.",
       stops: [
         { t: "Plaza de Armas", d: "Nos encontramos en la Fuente Inca, el corazón de la ciudad." },
+        { t: "Qorikancha", d: "El antiguo templo del sol inca, base de la actual iglesia de Santo Domingo." },
         { t: "Calle Hatun Rumiyoq", d: "El famoso muro inca de piedras talladas y el Palacio del Inca Roca." },
         { t: "Barrio de San Blas", d: "Calles coloniales, miradores escondidos, historia de artesanos." },
         { t: "Calle Siete Borreguitos", d: "Uno de los rincones más fotografiados de Cusco." },
@@ -51,6 +52,8 @@ export const dictionary = {
       sub: "Completa el formulario y guarda tu lugar. Recibirás la confirmación de inmediato.",
       note1: "Enviaremos la confirmación a tu correo y una copia de cada reserva llega automáticamente a nuestro equipo.",
       note2: "Recuerda: nuestro guía siempre lleva un paraguas negro en la Fuente Inca.",
+      note3: "Tu información solo se usa para coordinar tu reserva y nunca se comparte con terceros.",
+      note4: "Tenemos salidas todos los días, en español e inglés por separado — cada grupo recibe el tour en un solo idioma.",
       first: "Nombre", last: "Apellidos", email: "Correo electrónico", whatsapp: "WhatsApp", optional: "(opcional)",
       date: "Fecha", time: "Horario", timePlaceholder: "Selecciona...", people: "Número de participantes",
       submit: "Confirmar Reserva", submitting: "Confirmando...",
@@ -74,7 +77,7 @@ export const dictionary = {
       ],
     },
     testimonials: {
-      eyebrow: "Opiniones", title: "Lo que dicen quienes ya caminaron con nosotros", ratingSub: "basado en reseñas reales de viajeros en TripAdvisor",
+      eyebrow: "Opiniones", title: "Lo que dicen quienes ya caminaron con nosotros", ratingSub: "basado en 61 reseñas reales en Google",
       items: [
         { n: "Treti", c: "Miami, Estados Unidos", t: "Nuestro guía fue increíblemente paciente y supo mucho — nunca apuró al grupo. Una gran forma de conocer la historia real de la ciudad." },
         { n: "Sandra A.", c: "Vía TripAdvisor", t: "Un guía excelente — pudimos conocer Cusco de una forma distinta. Describió las calles y la historia con verdadera pasión y conocimiento." },
@@ -89,9 +92,10 @@ export const dictionary = {
         { q: "¿Dónde nos encontramos?", a: "En la Plaza de Armas de Cusco, en la Fuente Inca." },
         { q: "¿Cómo reconozco al guía?", a: "Siempre lleva un paraguas negro." },
         { q: "¿Necesito reservar?", a: "Sí, te recomendamos reservar con anticipación." },
-        { q: "¿Puedo reservar el mismo día?", a: "En muchos casos sí, según disponibilidad." },
+        { q: "¿Puedo reservar el mismo día?", a: "Sí, siempre puedes reservar el mismo día — nuestro equipo está pendiente para confirmarte la disponibilidad." },
         { q: "¿Qué debo llevar?", a: "Ropa cómoda, calzado para caminar, protector solar y agua." },
         { q: "¿Aceptan grupos?", a: "Sí. Si tu grupo supera 10 personas, escríbenos antes." },
+        { q: "¿Aceptan grupos privados?", a: "Sí, aceptamos grupos privados con previa anticipación — escríbenos por WhatsApp para coordinar fecha y horario." },
       ],
     },
     contact: {
@@ -137,6 +141,7 @@ export const dictionary = {
       sub: "Every stop has a story — Inca, colonial, or simply the most photographed spot in the city.",
       stops: [
         { t: "Plaza de Armas", d: "We meet at the Inca Fountain, the heart of the city." },
+        { t: "Qorikancha", d: "The ancient Inca temple of the sun, the base of today's Santo Domingo church." },
         { t: "Hatun Rumiyoq Street", d: "The famous Inca wall of carved stones and the Palace of Inca Roca." },
         { t: "San Blas Neighborhood", d: "Colonial streets, hidden lookouts, and the artisans' quarter story." },
         { t: "Siete Borreguitos Street", d: "One of Cusco's most photographed corners." },
@@ -154,6 +159,8 @@ export const dictionary = {
       sub: "Fill in the form and save your spot. You'll get confirmation right away.",
       note1: "We'll send confirmation to your email, and a copy of every booking reaches our team automatically.",
       note2: "Remember: our guide always carries a black umbrella at the Inca Fountain.",
+      note3: "Your information is only used to coordinate your booking and is never shared with third parties.",
+      note4: "We run tours every day, in Spanish and English separately — each group gets the tour in a single language.",
       first: "First name", last: "Last name", email: "Email", whatsapp: "WhatsApp", optional: "(optional)",
       date: "Date", time: "Time", timePlaceholder: "Select...", people: "Number of participants",
       submit: "Confirm Booking", submitting: "Confirming...",
@@ -177,7 +184,7 @@ export const dictionary = {
       ],
     },
     testimonials: {
-      eyebrow: "Reviews", title: "What people say after walking with us", ratingSub: "based on real traveler reviews on TripAdvisor",
+      eyebrow: "Reviews", title: "What people say after walking with us", ratingSub: "based on 61 real Google reviews",
       items: [
         { n: "Treti", c: "Miami, USA", t: "Our guide was incredibly patient and knowledgeable, and never rushed the group — a great way to really learn the city's history." },
         { n: "Sandra A.", c: "Via TripAdvisor", t: "An excellent guide — we got to see Cusco in a whole new way. He described the streets and history with real passion and knowledge." },
@@ -192,9 +199,10 @@ export const dictionary = {
         { q: "Where do we meet?", a: "At the Plaza de Armas in Cusco, at the Inca Fountain." },
         { q: "How do I recognize the guide?", a: "They always carry a black umbrella." },
         { q: "Do I need to book?", a: "Yes, we recommend booking ahead." },
-        { q: "Can I book the same day?", a: "Often yes, depending on availability." },
+        { q: "Can I book the same day?", a: "Yes, you can always book the same day — our team is always ready to confirm availability." },
         { q: "What should I bring?", a: "Comfortable clothes, walking shoes, sunscreen and water." },
         { q: "Do you take groups?", a: "Yes. If your group is over 10 people, message us ahead." },
+        { q: "Do you take private groups?", a: "Yes, we accept private groups with advance notice — message us on WhatsApp to arrange the date and time." },
       ],
     },
     contact: {

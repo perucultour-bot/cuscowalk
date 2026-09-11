@@ -11,15 +11,18 @@ export default function TraditionalTours() {
   }[lang];
 
   return (
-    <section id="tours" className="py-24 lg:py-28 bg-crema-600 dark:bg-negro-soft">
+    <section id="tours" className="py-14 sm:py-20 lg:py-28 bg-crema-600 dark:bg-negro-soft">
       <div className="container-cw">
-        <div className="max-w-xl mb-14">
+        <div className="max-w-xl mb-8 sm:mb-14">
           <span className="eyebrow">{copy.eyebrow}</span>
           <h2 className="mt-3 text-4xl lg:text-5xl">{copy.title}</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {TOURS.map((tour) => (
-            <div key={tour.slug} className="border border-piedra-200 dark:border-negro-800 rounded p-7 bg-white dark:bg-negro-800 flex flex-col">
+            <div key={tour.slug} className="border border-piedra-200 dark:border-negro-800 rounded overflow-hidden bg-white dark:bg-negro-800 flex flex-col">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={tour.image} alt={tour.name[lang]} loading="lazy" className="w-full aspect-[4/3] object-cover" />
+              <div className="p-7 flex flex-col flex-1">
               <span className="font-mono text-xs text-piedra">{tour.duration[lang]}</span>
               <h3 className="font-serif text-xl mt-2">{tour.name[lang]}</h3>
               <p className="text-sm text-piedra mt-3 flex-1">{tour.description[lang]}</p>
@@ -41,6 +44,7 @@ export default function TraditionalTours() {
                 <img src="/images/whatsapp-icon.png" alt="" className="w-5 h-5" />
                 {copy.cta}
               </a>
+              </div>
             </div>
           ))}
         </div>

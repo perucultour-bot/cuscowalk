@@ -13,6 +13,7 @@ export type Tour = {
   description: { es: string; en: string };
   highlights: { es: string[]; en: string[] };
   whatsappMessage: { es: string; en: string };
+  image: string;
 };
 
 // Para agregar un tour nuevo: copia uno de estos bloques completo y
@@ -20,6 +21,7 @@ export type Tour = {
 export const TOURS: Tour[] = [
   {
     slug: "city-tour",
+    image: "/images/sacsayhuaman-city-tour.webp",
     name: { es: "City Tour Cusco", en: "Cusco City Tour" },
     duration: { es: "Medio día · 4-5 horas", en: "Half day · 4-5 hours" },
     description: {
@@ -37,6 +39,7 @@ export const TOURS: Tour[] = [
   },
   {
     slug: "valle-sagrado",
+    image: "/images/valle-sagrado-paisaje.webp",
     name: { es: "Valle Sagrado", en: "Sacred Valley" },
     duration: { es: "Día completo · 10-11 horas", en: "Full day · 10-11 hours" },
     description: {
@@ -54,6 +57,7 @@ export const TOURS: Tour[] = [
   },
   {
     slug: "rainbow-mountain",
+    image: "/images/rainbow-mountain.webp",
     name: { es: "Montaña de Colores", en: "Rainbow Mountain" },
     duration: { es: "Día completo · 12-13 horas, salida muy temprano", en: "Full day · 12-13 hours, very early departure" },
     description: {

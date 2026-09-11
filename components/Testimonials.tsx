@@ -4,7 +4,7 @@ import { useApp } from "./Providers";
 export default function Testimonials() {
   const { t } = useApp();
   return (
-    <section id="testimonials" className="py-24 lg:py-28">
+    <section id="testimonials" className="py-14 sm:py-20 lg:py-28">
       <div className="container-cw">
         <div className="max-w-xl mb-10">
           <span className="eyebrow">{t.testimonials.eyebrow}</span>

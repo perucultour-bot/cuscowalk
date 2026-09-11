@@ -8,9 +8,9 @@ export default function Itinerary() {
   const { t } = useApp();
 
   return (
-    <section id="itinerary" className="py-24 lg:py-28">
+    <section id="itinerary" className="py-14 sm:py-20 lg:py-28">
       <div className="container-cw">
-        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="max-w-xl mb-14">
+        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="max-w-xl mb-8 sm:mb-14">
           <span className="eyebrow">{t.itinerary.eyebrow}</span>
           <h2 className="mt-3 text-4xl lg:text-5xl">{t.itinerary.title}</h2>
           <p className="mt-4 text-piedra text-lg">{t.itinerary.sub}</p>
@@ -39,7 +39,7 @@ export default function Itinerary() {
                   <p className="text-piedra text-sm mt-2 max-w-md">{stop.d}</p>
                 </div>
                 <div className="aspect-[4/3] rounded overflow-hidden border border-piedra-200 dark:border-negro-800">
-                  {i === 8 ? (
+                  {i === 9 ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src="/images/brindis-pisco-sour.webp" alt="" className="w-full h-full object-cover" loading="lazy" />
                   ) : (
