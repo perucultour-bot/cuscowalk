@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     url: "/",
   },
   twitter: { card: "summary_large_image" },
+  verification: { google: "_dbRXc44JymqAu8mJbvFt0K3Nn1wA2xWuRq58U1S3vs" },
   themeColor: "#0B0B0C",
 };
 
