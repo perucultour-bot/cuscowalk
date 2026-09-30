@@ -37,16 +37,9 @@ export default function Hero() {
         <img
           src="/images/plaza-de-armas-atardecer.webp"
           alt="Plaza de Armas de Cusco"
-          className="hero-slide-a absolute inset-0 w-full h-full object-cover object-[68%_55%] sm:object-[center_58%]"
+          className="w-full h-full object-cover object-[68%_55%] sm:object-[center_58%]"
           fetchPriority="high"
           loading="eager"
-        />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/san-cristobal-mirador-lluvia.webp"
-          alt="Mirador de San Cristóbal en Cusco"
-          className="hero-slide-b absolute inset-0 w-full h-full object-cover object-center"
-          loading="lazy"
         />
       </div>
       <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(180deg, rgba(11,11,12,.15) 0%, rgba(11,11,12,.55) 68%, rgba(11,11,12,.92) 100%)" }} />

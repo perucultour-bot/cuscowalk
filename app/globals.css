@@ -62,27 +62,3 @@ body {
 .prose-cw img {
   @apply rounded my-6 w-full object-cover border border-piedra-200 dark:border-negro-800;
 }
-
-/* Slide automático de la foto principal del hero */
-@keyframes heroSlideA {
-  0%, 45% { opacity: 1; }
-  55%, 100% { opacity: 0; }
-}
-@keyframes heroSlideB {
-  0%, 45% { opacity: 0; }
-  55%, 100% { opacity: 1; }
-}
-.hero-slide-a {
-  animation: heroSlideA 11s ease-in-out infinite;
-}
-.hero-slide-b {
-  animation: heroSlideB 11s ease-in-out infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-slide-a, .hero-slide-b {
-    animation: none !important;
-  }
-  .hero-slide-b {
-    opacity: 0;
-  }
-}
