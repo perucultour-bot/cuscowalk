@@ -31,7 +31,7 @@ export default function Itinerary() {
               className="grid grid-cols-[48px_1fr] sm:grid-cols-[60px_1fr] gap-5 sm:gap-7 py-7 relative"
             >
               <div className="w-12 h-12 sm:w-[60px] sm:h-[60px] rounded-full border border-piedra-200 bg-white dark:bg-negro-soft flex items-center justify-center font-mono text-xs sm:text-sm text-piedra relative z-10 flex-none">
-                0{i + 1}
+                {String(i + 1).padStart(2, "0")}
               </div>
               <div className="grid sm:grid-cols-[1fr_200px] gap-6 items-center pb-2 border-b border-piedra-200 dark:border-negro-800 last:border-none">
                 <div>

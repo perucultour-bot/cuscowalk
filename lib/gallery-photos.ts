@@ -23,12 +23,12 @@ export const GALLERY_PHOTOS: { url: string; titleEs: string; titleEn: string; de
     descEs: "La calle más fotografiada", descEn: "The most photographed street",
   },
   {
-    url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cusco%20Peru-%20shop%20making%20Bandurrias.jpg?width=700",
+    url: "/images/luthier-guia-musica.webp",
     titleEs: "Museo del Luthier", titleEn: "Luthier Museum",
-    descEs: "Instrumentos tradicionales", descEn: "Traditional instruments",
+    descEs: "Nuestro guía tocando instrumentos tradicionales", descEn: "Our guide playing traditional instruments",
   },
   {
-    url: "/images/san-cristobal-barrio-escaleras.webp",
+    url: "/images/mirador-plaza-armas.webp",
     titleEs: "San Cristóbal", titleEn: "San Cristóbal",
     descEs: "El mejor mirador de Cusco", descEn: "Cusco's best viewpoint",
   },

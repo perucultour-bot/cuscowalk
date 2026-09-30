@@ -92,11 +92,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-3 text-[10.5px] text-[#5A5548] text-center sm:text-left">
-          Fotos de Cusco Walk. Una foto de referencia del Museo del Luthier vía{" "}
-          <a href="https://commons.wikimedia.org" target="_blank" rel="noopener" className="underline hover:text-amarillo">
-            Wikimedia Commons
-          </a>
-          . Ilustraciones propias de Cusco Walk.
+          Fotos y contenido propios de Cusco Walk.
         </div>
       </div>
     </footer>
