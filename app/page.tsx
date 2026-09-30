@@ -28,7 +28,7 @@ export default function Home() {
       <Itinerary />
       <Schedule onPick={setSlot} />
 
-      <section id="booking" className="py-14 sm:py-20 lg:py-28 bg-negro text-crema">
+      <section id="booking" className="py-9 sm:py-16 lg:py-28 bg-negro text-crema">
         <div className="container-cw grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-14">
           <div>
             <span className="eyebrow !text-[#8A8474]">{t.booking.eyebrow}</span>

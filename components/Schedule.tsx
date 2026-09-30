@@ -24,9 +24,9 @@ export default function Schedule({ onPick }: { onPick: (slot: string) => void })
   const { t, lang } = useApp();
 
   return (
-    <section id="schedule" className="py-14 sm:py-20 lg:py-28">
+    <section id="schedule" className="py-9 sm:py-16 lg:py-28">
       <div className="container-cw">
-        <div className="max-w-xl mb-8 sm:mb-14">
+        <div className="max-w-xl mb-6 sm:mb-12">
           <span className="eyebrow">{t.schedule.eyebrow}</span>
           <h2 className="mt-3 text-4xl lg:text-5xl">{t.schedule.title}</h2>
         </div>

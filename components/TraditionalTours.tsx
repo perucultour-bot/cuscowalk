@@ -11,9 +11,9 @@ export default function TraditionalTours() {
   }[lang];
 
   return (
-    <section id="tours" className="py-14 sm:py-20 lg:py-28 bg-crema-600 dark:bg-negro-soft">
+    <section id="tours" className="py-9 sm:py-16 lg:py-28 bg-crema-600 dark:bg-negro-soft">
       <div className="container-cw">
-        <div className="max-w-xl mb-8 sm:mb-14">
+        <div className="max-w-xl mb-6 sm:mb-12">
           <span className="eyebrow">{copy.eyebrow}</span>
           <h2 className="mt-3 text-4xl lg:text-5xl">{copy.title}</h2>
         </div>

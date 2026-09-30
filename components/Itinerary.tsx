@@ -8,9 +8,9 @@ export default function Itinerary() {
   const { t } = useApp();
 
   return (
-    <section id="itinerary" className="py-14 sm:py-20 lg:py-28">
+    <section id="itinerary" className="py-9 sm:py-16 lg:py-28">
       <div className="container-cw">
-        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="max-w-xl mb-8 sm:mb-14">
+        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="max-w-xl mb-6 sm:mb-12">
           <span className="eyebrow">{t.itinerary.eyebrow}</span>
           <h2 className="mt-3 text-4xl lg:text-5xl">{t.itinerary.title}</h2>
           <p className="mt-4 text-piedra text-lg">{t.itinerary.sub}</p>
