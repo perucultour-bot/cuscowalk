@@ -27,48 +27,79 @@ function AnimatedCounter({ target }: { target: number }) {
   return <b ref={ref} className="block font-serif text-3xl">{value.toLocaleString("es-PE")}</b>;
 }
 
+// Mosaico de fotos del encabezado — chicas, livianas, y clicables (llevan a la Galería).
+const HERO_PHOTOS = [
+  { src: "/images/plaza-de-armas-atardecer.webp", alt: "Plaza de Armas de Cusco" },
+  { src: "/images/qorikancha-panoramica.webp", alt: "Qorikancha" },
+  { src: "/images/hatun-rumiyoq-muro.webp", alt: "Calle Hatun Rumiyoq" },
+  { src: "/images/san-blas-callejon-escaleras.webp", alt: "Barrio de San Blas" },
+  { src: "/images/san-cristobal-mirador-lluvia.webp", alt: "Mirador de San Cristóbal" },
+];
+
 export default function Hero() {
-  const { t } = useApp();
+  const { t, lang } = useApp();
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col justify-end pt-36 overflow-hidden bg-negro">
-      <div className="absolute inset-0 z-0 bg-negro">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/plaza-de-armas-atardecer.webp"
-          alt="Plaza de Armas de Cusco"
-          className="w-full h-full object-cover object-[68%_55%] sm:object-[center_58%]"
-          fetchPriority="high"
-          loading="eager"
-        />
-      </div>
-      <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(180deg, rgba(11,11,12,.15) 0%, rgba(11,11,12,.55) 68%, rgba(11,11,12,.92) 100%)" }} />
+    <section id="hero" className="pt-28 lg:pt-32 pb-16 lg:pb-20 bg-crema dark:bg-negro">
+      <div className="container-cw">
+        {/* Mosaico de fotos */}
+        <a href="#gallery" className="block group relative rounded-xl overflow-hidden">
+          <div className="hidden md:grid grid-cols-4 grid-rows-2 gap-2 h-[360px] lg:h-[420px]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={HERO_PHOTOS[0].src}
+              alt={HERO_PHOTOS[0].alt}
+              className="col-span-2 row-span-2 w-full h-full object-cover object-[68%_55%] group-hover:brightness-[.94] transition-[filter]"
+              fetchPriority="high"
+              loading="eager"
+            />
+            {HERO_PHOTOS.slice(1).map((p) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img key={p.src} src={p.src} alt={p.alt} loading="lazy" className="w-full h-full object-cover group-hover:brightness-[.94] transition-[filter]" />
+            ))}
+          </div>
+          {/* Versión móvil: solo la foto principal */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={HERO_PHOTOS[0].src}
+            alt={HERO_PHOTOS[0].alt}
+            className="md:hidden w-full h-64 object-cover object-[68%_55%] rounded-xl"
+            fetchPriority="high"
+            loading="eager"
+          />
+          <span className="absolute bottom-3 right-3 bg-crema text-[#151513] text-xs font-semibold px-3.5 py-2 rounded-full shadow-md flex items-center gap-1.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+              <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="M21 15l-5-5L5 21" />
+            </svg>
+            {lang === "es" ? "Ver todas las fotos" : "See all photos"}
+          </span>
+        </a>
 
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="container-cw relative z-[2] text-crema pb-20"
-      >
-        <span className="inline-flex items-center gap-2 bg-amarillo/10 border border-amarillo/40 text-amarillo font-mono text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-6">
-          {t.hero.badge}
-        </span>
-        <h1 className="font-serif font-semibold text-[9vw] sm:text-5xl lg:text-6xl leading-[1.08] max-w-2xl">
-          {t.hero.titleLine1}
-          <br />
-          <em className="italic text-amarillo">{t.hero.titleEm}</em>
-        </h1>
-        <p className="mt-6 text-lg max-w-md text-[#D8D3C4]">{t.hero.sub}</p>
-        <div className="flex gap-3.5 mt-10 flex-wrap">
-          <a href="#booking" className="btn btn-primary">{t.hero.cta1}</a>
-          <a href="#itinerary" className="btn border border-white/35 text-white">{t.hero.cta2}</a>
-        </div>
-        <div className="mt-16 flex gap-10 flex-wrap border-t border-white/15 pt-7">
-          <div><AnimatedCounter target={14280} /><span className="text-xs text-[#B9B2A0]">{t.hero.stat1}</span></div>
-          <div><b className="block font-serif text-3xl">4.9/5</b><span className="text-xs text-[#B9B2A0]">{t.hero.stat2}</span></div>
-          <div><b className="block font-serif text-3xl">2h</b><span className="text-xs text-[#B9B2A0]">{t.hero.stat3}</span></div>
-        </div>
-      </motion.div>
+        {/* Texto e info debajo del mosaico */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-10 lg:mt-12"
+        >
+          <span className="eyebrow">{t.hero.badge}</span>
+          <h1 className="font-serif font-semibold text-[9vw] sm:text-5xl lg:text-6xl leading-[1.08] max-w-2xl mt-3">
+            {t.hero.titleLine1}
+            <br />
+            <em className="italic text-amarillo-600 dark:text-amarillo">{t.hero.titleEm}</em>
+          </h1>
+          <p className="mt-6 text-lg max-w-md text-piedra">{t.hero.sub}</p>
+          <div className="flex gap-3.5 mt-10 flex-wrap">
+            <a href="#booking" className="btn btn-primary">{t.hero.cta1}</a>
+            <a href="#itinerary" className="btn border border-piedra-200 dark:border-white/35">{t.hero.cta2}</a>
+          </div>
+          <div className="mt-14 flex gap-10 flex-wrap border-t border-piedra-200 dark:border-white/15 pt-7">
+            <div><AnimatedCounter target={14280} /><span className="text-xs text-piedra">{t.hero.stat1}</span></div>
+            <div><b className="block font-serif text-3xl">5.0/5</b><span className="text-xs text-piedra">{t.hero.stat2}</span></div>
+            <div><b className="block font-serif text-3xl">2h</b><span className="text-xs text-piedra">{t.hero.stat3}</span></div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }
