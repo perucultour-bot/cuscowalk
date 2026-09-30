@@ -26,6 +26,7 @@ export const dictionary = {
         { h: "Pequeños detalles en el camino", p: "Un llavero de llama de regalo y, al final, una degustación de bebida tradicional local." },
         { h: "Guías profesionales y locales", p: "Profesionales en ciencias sociales, nacidos en Cusco, con conocimiento real de su historia y cultura." },
         { h: "Un solo idioma por tour", p: "Cada grupo recibe el recorrido en un único idioma — español o inglés, sin mezclarlos." },
+        { h: "Tours privados para grupos", p: "También organizamos tours privados para grupos, con previa coordinación por WhatsApp." },
       ],
     },
     itinerary: {
@@ -133,6 +134,7 @@ export const dictionary = {
         { h: "Little details along the way", p: "A free llama keychain, and a traditional local drink tasting at the end." },
         { h: "Professional, local guides", p: "Social science professionals, born in Cusco, with real knowledge of its history and culture." },
         { h: "One language per tour", p: "Each group gets the tour in a single language — Spanish or English, never mixed." },
+        { h: "Private group tours", p: "We also arrange private tours for groups, coordinated in advance via WhatsApp." },
       ],
     },
     itinerary: {

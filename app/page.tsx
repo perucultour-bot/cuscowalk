@@ -30,12 +30,12 @@ export default function Home() {
 
       <section id="booking" className="py-14 sm:py-20 lg:py-28 bg-negro text-crema">
         <div className="container-cw grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-14">
-          <div className="order-2 lg:order-1">
+          <div>
             <span className="eyebrow !text-[#8A8474]">{t.booking.eyebrow}</span>
             <h3 className="mt-3 text-3xl lg:text-4xl font-serif">{t.booking.title}</h3>
             <p className="text-[#B9B2A0] mt-3 max-w-sm">{t.booking.sub}</p>
           </div>
-          <div className="order-1 lg:order-2">
+          <div>
             <Booking prefillSlot={slot} />
           </div>
         </div>
@@ -46,15 +46,6 @@ export default function Home() {
       <Testimonials />
       <Faq />
       <Contact />
-
-      <div className="bg-negro border-t border-white/10 py-8">
-        <div className="container-cw grid grid-cols-2 sm:grid-cols-4 gap-5 text-[#B9B2A0] text-xs">
-          <p>{t.booking.note1}</p>
-          <p>{t.booking.note2}</p>
-          <p>{t.booking.note4}</p>
-          <p>{t.booking.note3}</p>
-        </div>
-      </div>
 
       <Footer />
       <WhatsAppFloat />
