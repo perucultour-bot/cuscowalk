@@ -5,14 +5,14 @@ export const dictionary = {
     nav: { about: "Sobre el Tour", itinerary: "Itinerario", schedule: "Horarios", gallery: "Galería", reviews: "Opiniones", faq: "Preguntas", contact: "Contacto", book: "Reservar Gratis", tours: "Otros Tours" },
     hero: {
       badge: "★ Free Walking Tour #1 en Cusco",
-      tags: ["Historia", "Arquitectura Inca", "Cultura Viva", "100% Gratis"],
+      tags: ["Historia", "Arquitectura Inca", "Cultura Viva", "Sin Pago Adelantado"],
       titleLine1: "Únete al mejor Free Walking Tour de Cusco y",
       titleEm: "vive su historia en cada paso",
-      sub: "Explora la ciudad con nuestros guías locales y vive una experiencia auténtica, totalmente gratuita.",
+      sub: "Explora la ciudad con nuestros guías locales y vive una experiencia auténtica, sin pagar nada por adelantado.",
       cta1: "Reservar Gratis",
       cta2: "Ver el Recorrido",
       stat1: "viajeros ya exploraron Cusco con nosotros",
-      stat2: "calificación 5.0 en 61 reseñas reales de Google",
+      stat2: "calificación 5.0 en las mejores plataformas de viaje",
       stat3: "de historia, leyendas y arquitectura inca",
     },
     about: {
@@ -80,7 +80,7 @@ export const dictionary = {
       ],
     },
     testimonials: {
-      eyebrow: "Opiniones", title: "Lo que dicen quienes ya caminaron con nosotros", ratingSub: "basado en 61 reseñas reales en Google",
+      eyebrow: "Opiniones", title: "Lo que dicen quienes ya caminaron con nosotros", ratingSub: "basado en reseñas reales en las mejores plataformas de viaje",
       items: [
         { n: "Treti", c: "Miami, Estados Unidos", t: "Nuestro guía fue increíblemente paciente y supo mucho — nunca apuró al grupo. Una gran forma de conocer la historia real de la ciudad." },
         { n: "Sandra A.", c: "Vía TripAdvisor", t: "Un guía excelente — pudimos conocer Cusco de una forma distinta. Describió las calles y la historia con verdadera pasión y conocimiento." },
@@ -90,7 +90,7 @@ export const dictionary = {
     faq: {
       eyebrow: "Preguntas frecuentes", title: "Todo lo que necesitas saber",
       items: [
-        { q: "¿El tour realmente es gratuito?", a: "Sí. Al final, si lo disfrutaste, puedes dejar una propina a tu guía según lo que consideres justo." },
+        { q: "¿El tour realmente es gratuito?", a: "No hay ningún costo por reservar ni un precio fijo de entrada. Al final del recorrido, se espera que cada participante le dé una contribución a su guía — tú decides el monto, pero no es opcional dejarla." },
         { q: "¿Cuánto dura?", a: "Aproximadamente 2 horas, caminando a un ritmo cómodo." },
         { q: "¿Dónde nos encontramos?", a: "En la Plaza de Armas de Cusco, en la Fuente Inca." },
         { q: "¿Cómo reconozco al guía?", a: "Siempre lleva un paraguas negro." },
@@ -115,14 +115,14 @@ export const dictionary = {
     nav: { about: "About the Tour", itinerary: "Itinerary", schedule: "Schedule", gallery: "Gallery", reviews: "Reviews", faq: "FAQ", contact: "Contact", book: "Book Free Now", tours: "Other Tours" },
     hero: {
       badge: "★ Free Walking Tour #1 in Cusco",
-      tags: ["History", "Inca Architecture", "Living Culture", "100% Free"],
+      tags: ["History", "Inca Architecture", "Living Culture", "No Upfront Cost"],
       titleLine1: "Join the Best Free Walking Tour in Cusco and",
       titleEm: "Live Its History in Every Step",
-      sub: "Explore the city with our local guides and experience something authentic — completely free.",
+      sub: "Explore the city with our local guides and experience something authentic — no payment required upfront.",
       cta1: "Book Free Now",
       cta2: "See the Route",
       stat1: "travelers have already explored Cusco with us",
-      stat2: "5.0 rating across 61 real Google reviews",
+      stat2: "5.0 rating on the top travel platforms",
       stat3: "of history, legends and Inca architecture",
     },
     about: {
@@ -190,7 +190,7 @@ export const dictionary = {
       ],
     },
     testimonials: {
-      eyebrow: "Reviews", title: "What people say after walking with us", ratingSub: "based on 61 real Google reviews",
+      eyebrow: "Reviews", title: "What people say after walking with us", ratingSub: "based on real reviews across the top travel platforms",
       items: [
         { n: "Treti", c: "Miami, USA", t: "Our guide was incredibly patient and knowledgeable, and never rushed the group — a great way to really learn the city's history." },
         { n: "Sandra A.", c: "Via TripAdvisor", t: "An excellent guide — we got to see Cusco in a whole new way. He described the streets and history with real passion and knowledge." },
@@ -200,7 +200,7 @@ export const dictionary = {
     faq: {
       eyebrow: "FAQ", title: "Everything you need to know",
       items: [
-        { q: "Is the tour really free?", a: "Yes. At the end, if you enjoyed it, you can tip your guide whatever you feel is fair." },
+        { q: "Is the tour really free?", a: "There's no booking fee and no fixed entry price. At the end of the tour, every participant is expected to contribute to their guide — you decide the amount, but leaving a contribution isn't optional." },
         { q: "How long does it last?", a: "About 2 hours, walking at a comfortable pace." },
         { q: "Where do we meet?", a: "At the Plaza de Armas in Cusco, at the Inca Fountain." },
         { q: "How do I recognize the guide?", a: "They always carry a black umbrella." },

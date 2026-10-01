@@ -44,7 +44,7 @@ const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { q: "Is the tour really free?", a: "Yes. At the end, if you enjoyed it, you can tip your guide whatever you feel is fair." },
+    { q: "Is the tour really free?", a: "There's no booking fee and no fixed entry price. At the end of the tour, every participant is expected to contribute to their guide — you decide the amount, but leaving a contribution isn't optional." },
     { q: "How long does it last?", a: "About 2 hours, walking at a comfortable pace." },
     { q: "Where do we meet?", a: "At the Plaza de Armas in Cusco, at the Inca Fountain." },
     { q: "How do I recognize the guide?", a: "They always carry a black umbrella." },
