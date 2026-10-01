@@ -42,7 +42,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setLang(lang === "es" ? "en" : "es")}
-              className="font-mono text-xs border border-piedra-200 rounded-full flex overflow-hidden"
+              className="font-mono text-sm border border-piedra-200 rounded-full flex overflow-hidden"
               aria-label="Cambiar idioma"
             >
               <span className={`flex items-center gap-1.5 px-2.5 py-1.5 ${lang === "es" ? "bg-negro text-crema dark:bg-crema dark:text-negro" : ""}`}>🇪🇸 ES</span>
@@ -51,7 +51,7 @@ export default function Header() {
             <button onClick={toggleTheme} className="w-9 h-9 rounded-full border border-piedra-200 flex items-center justify-center" aria-label="Cambiar tema">
               {theme === "dark" ? "☀" : "☾"}
             </button>
-            <a href="/#booking" className="btn btn-primary btn-sm hidden lg:inline-flex !py-2.5 !px-5 !text-xs">
+            <a href="/#booking" className="btn btn-primary btn-sm hidden lg:inline-flex !py-2.5 !px-5 !text-sm">
               {t.nav.book}
             </a>
             <button className="lg:hidden w-9 h-9 rounded-full border border-piedra-200 flex items-center justify-center" onClick={() => setDrawerOpen(true)} aria-label="Abrir menú">

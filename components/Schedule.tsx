@@ -37,7 +37,7 @@ export default function Schedule({ onPick }: { onPick: (slot: string) => void })
                 {s.time}
                 <span className="text-base ml-1">{s.suffix}</span>
               </span>
-              <p className="text-xs text-piedra mt-3 leading-relaxed">{lang === "es" ? s.noteEs : s.noteEn}</p>
+              <p className="text-sm text-piedra mt-3 leading-relaxed">{lang === "es" ? s.noteEs : s.noteEn}</p>
               <a
                 href="#booking"
                 onClick={() => onPick(s.full)}

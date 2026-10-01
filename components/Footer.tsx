@@ -21,7 +21,7 @@ export default function Footer() {
               <p className="text-sm font-semibold text-crema leading-tight">
                 {lang === "es" ? "Guías oficiales y verificados" : "Official, verified guides"}
               </p>
-              <p className="text-[11px] text-[#8A8474] leading-tight">
+              <p className="text-[13px] text-[#8A8474] leading-tight">
                 {lang === "es" ? "Registrados ante GERCETUR" : "Registered with GERCETUR"}
               </p>
             </div>
@@ -84,14 +84,14 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <div className="text-xs text-[#7A7466] text-center sm:text-right">
+          <div className="text-sm text-[#7A7466] text-center sm:text-right">
             <span>© {new Date().getFullYear()} Cusco Walk. {t.footer.rights}</span>
             <span className="mx-1.5">·</span>
             <span>{t.footer.made}</span>
           </div>
         </div>
 
-        <div className="mt-3 text-[10.5px] text-[#5A5548] text-center sm:text-left">
+        <div className="mt-3 text-[12px] text-[#5A5548] text-center sm:text-left">
           Fotos y contenido propios de Cusco Walk.
         </div>
       </div>

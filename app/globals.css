@@ -21,7 +21,7 @@ body {
 }
 
 .eyebrow {
-  @apply font-mono text-xs tracking-[0.14em] uppercase text-piedra flex items-center gap-2;
+  @apply font-mono text-sm tracking-[0.12em] uppercase text-piedra flex items-center gap-2;
 }
 
 .btn {

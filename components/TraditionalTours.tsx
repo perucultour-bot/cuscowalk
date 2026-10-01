@@ -23,12 +23,12 @@ export default function TraditionalTours() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={tour.image} alt={tour.name[lang]} loading="lazy" className="w-full aspect-[4/3] object-cover" />
               <div className="p-7 flex flex-col flex-1">
-              <span className="font-mono text-xs text-piedra">{tour.duration[lang]}</span>
+              <span className="font-mono text-sm text-piedra">{tour.duration[lang]}</span>
               <h3 className="font-serif text-xl mt-2">{tour.name[lang]}</h3>
               <p className="text-sm text-piedra mt-3 flex-1">{tour.description[lang]}</p>
               <ul className="mt-4 space-y-1.5">
                 {tour.highlights[lang].map((h, hi) => (
-                  <li key={hi} className="text-xs flex items-start gap-2">
+                  <li key={hi} className="text-sm flex items-start gap-2">
                     <span className="text-amarillo-600 dark:text-amarillo mt-0.5">●</span>
                     <span>{h}</span>
                   </li>

@@ -26,7 +26,7 @@ export default function BlogList({ posts }: { posts: PostMeta[] }) {
           href={`/blog/${post.slug}`}
           className="block border border-piedra-200 dark:border-negro-800 rounded p-6 bg-white dark:bg-negro-800 hover:-translate-y-1 transition-transform"
         >
-          {post.date && <span className="font-mono text-xs text-piedra">{post.date}</span>}
+          {post.date && <span className="font-mono text-sm text-piedra">{post.date}</span>}
           <h2 className="font-serif text-xl mt-2">{post.title}</h2>
           <p className="text-piedra text-sm mt-2">{post.excerpt}</p>
           <span className="inline-block mt-4 text-sm font-semibold text-amarillo-600 dark:text-amarillo">

@@ -8,7 +8,7 @@ export const dictionary = {
       tags: ["Historia", "Arquitectura Inca", "Cultura Viva", "Sin Pago Adelantado"],
       titleLine1: "Únete al mejor Free Walking Tour de Cusco y",
       titleEm: "vive su historia en cada paso",
-      sub: "Explora la ciudad con nuestros guías locales y vive una experiencia auténtica, sin pagar nada por adelantado.",
+      sub: "Camina por el centro histórico y descubre las leyendas, la historia y la arqueología que convirtieron a Cusco en la capital del imperio inca.",
       cta1: "Reservar Gratis",
       cta2: "Ver el Recorrido",
       stat1: "viajeros ya exploraron Cusco con nosotros",
@@ -90,7 +90,7 @@ export const dictionary = {
     faq: {
       eyebrow: "Preguntas frecuentes", title: "Todo lo que necesitas saber",
       items: [
-        { q: "¿El tour realmente es gratuito?", a: "No hay ningún costo por reservar ni un precio fijo de entrada. Al final del recorrido, se espera que cada participante le dé una contribución a su guía — tú decides el monto, pero no es opcional dejarla." },
+        { q: "¿El tour realmente es gratuito?", a: "No hay ningún costo por reservar ni un precio fijo de entrada. Al final del recorrido, nos encantaría que cada participante le deje una contribución a su guía, como agradecimiento por su tiempo y dedicación." },
         { q: "¿Cuánto dura?", a: "Aproximadamente 2 horas, caminando a un ritmo cómodo." },
         { q: "¿Dónde nos encontramos?", a: "En la Plaza de Armas de Cusco, en la Fuente Inca." },
         { q: "¿Cómo reconozco al guía?", a: "Siempre lleva un paraguas negro." },
@@ -118,7 +118,7 @@ export const dictionary = {
       tags: ["History", "Inca Architecture", "Living Culture", "No Upfront Cost"],
       titleLine1: "Join the Best Free Walking Tour in Cusco and",
       titleEm: "Live Its History in Every Step",
-      sub: "Explore the city with our local guides and experience something authentic — no payment required upfront.",
+      sub: "Walk through the historic center and discover the legends, history, and archaeology that made Cusco the capital of the Inca Empire.",
       cta1: "Book Free Now",
       cta2: "See the Route",
       stat1: "travelers have already explored Cusco with us",
@@ -200,7 +200,7 @@ export const dictionary = {
     faq: {
       eyebrow: "FAQ", title: "Everything you need to know",
       items: [
-        { q: "Is the tour really free?", a: "There's no booking fee and no fixed entry price. At the end of the tour, every participant is expected to contribute to their guide — you decide the amount, but leaving a contribution isn't optional." },
+        { q: "Is the tour really free?", a: "There's no booking fee and no fixed entry price. At the end of the tour, we'd love for each participant to leave a contribution for their guide, as a thank-you for their time and dedication." },
         { q: "How long does it last?", a: "About 2 hours, walking at a comfortable pace." },
         { q: "Where do we meet?", a: "At the Plaza de Armas in Cusco, at the Inca Fountain." },
         { q: "How do I recognize the guide?", a: "They always carry a black umbrella." },

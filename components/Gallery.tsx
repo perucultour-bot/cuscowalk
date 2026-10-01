@@ -59,7 +59,7 @@ export default function Gallery() {
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/70 to-transparent text-white text-xs font-semibold text-left opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/70 to-transparent text-white text-sm font-semibold text-left opacity-0 group-hover:opacity-100 transition-opacity">
                 {lang === "es" ? photo.titleEs : photo.titleEn}
               </div>
             </button>
@@ -120,7 +120,7 @@ export default function Gallery() {
             <div className="p-6">
               <h4 className="font-serif text-lg text-[#151513]">{lang === "es" ? GALLERY_PHOTOS[open].titleEs : GALLERY_PHOTOS[open].titleEn}</h4>
               <p className="text-sm text-piedra mt-1">{lang === "es" ? GALLERY_PHOTOS[open].descEs : GALLERY_PHOTOS[open].descEn}</p>
-              <p className="text-xs text-piedra/70 mt-3">{open + 1} / {total}</p>
+              <p className="text-sm text-piedra/70 mt-3">{open + 1} / {total}</p>
             </div>
           </div>
         </div>

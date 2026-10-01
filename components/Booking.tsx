@@ -80,7 +80,7 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
         </div>
         <div className="flex gap-3 items-center bg-negro text-crema rounded p-4 mt-5 text-left">
           <UmbrellaIcon className="w-6 h-6 text-amarillo flex-none" />
-          <p className="text-xs text-[#D8D3C4]">{t.booking.confirmUmbrella}</p>
+          <p className="text-sm text-[#D8D3C4]">{t.booking.confirmUmbrella}</p>
         </div>
         <button onClick={reset} className="btn btn-ghost mt-6">{t.booking.another}</button>
       </div>
@@ -96,36 +96,36 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
       )}
       <div className="grid sm:grid-cols-2 gap-4">
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-semibold">{t.booking.first}</label>
+          <label className="text-sm font-semibold">{t.booking.first}</label>
           <input className={`border rounded px-3.5 py-3 bg-white dark:bg-negro-800 text-[#151513] dark:text-crema ${field("firstName")}`}
             value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })} />
-          {errors.firstName && <span className="text-xs text-red-600">{errors.firstName}</span>}
+          {errors.firstName && <span className="text-sm text-red-600">{errors.firstName}</span>}
         </div>
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-semibold">{t.booking.last}</label>
+          <label className="text-sm font-semibold">{t.booking.last}</label>
           <input className={`border rounded px-3.5 py-3 bg-white dark:bg-negro-800 text-[#151513] dark:text-crema ${field("lastName")}`}
             value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })} />
-          {errors.lastName && <span className="text-xs text-red-600">{errors.lastName}</span>}
+          {errors.lastName && <span className="text-sm text-red-600">{errors.lastName}</span>}
         </div>
         <div className="flex flex-col gap-1.5 sm:col-span-2">
-          <label className="text-xs font-semibold">{t.booking.email}</label>
+          <label className="text-sm font-semibold">{t.booking.email}</label>
           <input type="email" className={`border rounded px-3.5 py-3 bg-white dark:bg-negro-800 text-[#151513] dark:text-crema ${field("email")}`}
             value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-          {errors.email && <span className="text-xs text-red-600">{errors.email}</span>}
+          {errors.email && <span className="text-sm text-red-600">{errors.email}</span>}
         </div>
         <div className="flex flex-col gap-1.5 sm:col-span-2">
-          <label className="text-xs font-semibold">{t.booking.whatsapp} <span className="font-normal text-piedra">{t.booking.optional}</span></label>
+          <label className="text-sm font-semibold">{t.booking.whatsapp} <span className="font-normal text-piedra">{t.booking.optional}</span></label>
           <input type="tel" placeholder="+51 9..." className="border border-piedra-200 dark:border-negro-800 rounded px-3.5 py-3 bg-white dark:bg-negro-800 text-[#151513] dark:text-crema"
             value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
         </div>
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-semibold">{t.booking.date}</label>
+          <label className="text-sm font-semibold">{t.booking.date}</label>
           <input type="date" min={todayISO} className={`border rounded px-3.5 py-3 bg-white dark:bg-negro-800 text-[#151513] dark:text-crema ${field("date")}`}
             value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} />
-          {errors.date && <span className="text-xs text-red-600">{errors.date}</span>}
+          {errors.date && <span className="text-sm text-red-600">{errors.date}</span>}
         </div>
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-semibold">{t.booking.time}</label>
+          <label className="text-sm font-semibold">{t.booking.time}</label>
           <select className={`border rounded px-3.5 py-3 bg-white dark:bg-negro-800 text-[#151513] dark:text-crema ${field("time")}`}
             value={form.time} onChange={(e) => setForm({ ...form, time: e.target.value })}>
             <option value="">{t.booking.timePlaceholder}</option>
@@ -133,10 +133,10 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
             <option value="1:00 PM">1:00 PM</option>
             <option value="3:30 PM">3:30 PM</option>
           </select>
-          {errors.time && <span className="text-xs text-red-600">{errors.time}</span>}
+          {errors.time && <span className="text-sm text-red-600">{errors.time}</span>}
         </div>
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-semibold">{t.booking.tourLang}</label>
+          <label className="text-sm font-semibold">{t.booking.tourLang}</label>
           <select className="border rounded px-3.5 py-3 bg-white dark:bg-negro-800 text-[#151513] dark:text-crema border-piedra-200 dark:border-negro-800"
             value={form.tourLanguage} onChange={(e) => setForm({ ...form, tourLanguage: e.target.value as "es" | "en" })}>
             <option value="es">🇪🇸 {t.booking.tourLangEs}</option>
@@ -144,7 +144,7 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
           </select>
         </div>
         <div className="flex flex-col gap-1.5 sm:col-span-2">
-          <label className="text-xs font-semibold">{t.booking.people}</label>
+          <label className="text-sm font-semibold">{t.booking.people}</label>
           <div className="flex items-center gap-3.5">
             <button type="button" onClick={() => setForm((f) => ({ ...f, people: Math.max(1, f.people - 1) }))} className="w-9 h-9 rounded-full border border-piedra-200">−</button>
             <span className="font-mono w-5 text-center">{form.people}</span>
@@ -153,7 +153,7 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
         </div>
       </div>
       <div className="flex items-center justify-between gap-4 flex-wrap mt-4">
-        <small className="text-piedra text-xs max-w-[260px]">{t.booking.disclaimer}</small>
+        <small className="text-piedra text-sm max-w-[260px]">{t.booking.disclaimer}</small>
         <button type="submit" disabled={status === "submitting"} className="btn btn-primary disabled:opacity-60">
           {status === "submitting" ? t.booking.submitting : t.booking.submit}
         </button>

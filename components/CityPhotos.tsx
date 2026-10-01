@@ -32,7 +32,7 @@ export default function CityPhotos() {
                   onError={() => setBroken((b) => ({ ...b, [i]: true }))}
                 />
               </div>
-              <figcaption className="text-xs text-piedra mt-2">{lang === "es" ? photo.captionEs : photo.captionEn}</figcaption>
+              <figcaption className="text-sm text-piedra mt-2">{lang === "es" ? photo.captionEs : photo.captionEn}</figcaption>
             </figure>
           )
         )}
