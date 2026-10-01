@@ -6,7 +6,7 @@ export const dictionary = {
     hero: {
       badge: "★ Free Walking Tour #1 en Cusco",
       tags: ["Historia", "Arquitectura Inca", "Cultura Viva", "100% Gratis"],
-      titleLine1: "Únete al mejor Walking Tour de Cusco y",
+      titleLine1: "Únete al mejor Free Walking Tour de Cusco y",
       titleEm: "vive su historia en cada paso",
       sub: "Explora la ciudad con nuestros guías locales y vive una experiencia auténtica, totalmente gratuita.",
       cta1: "Reservar Gratis",
@@ -116,7 +116,7 @@ export const dictionary = {
     hero: {
       badge: "★ Free Walking Tour #1 in Cusco",
       tags: ["History", "Inca Architecture", "Living Culture", "100% Free"],
-      titleLine1: "Join the Best Walking Tour in Cusco and",
+      titleLine1: "Join the Best Free Walking Tour in Cusco and",
       titleEm: "Live Its History in Every Step",
       sub: "Explore the city with our local guides and experience something authentic — completely free.",
       cta1: "Book Free Now",

@@ -46,7 +46,7 @@ export default function Hero() {
 
       <a
         href="#gallery"
-        className="absolute top-24 right-5 sm:top-28 sm:right-8 z-10 bg-crema/95 text-[#151513] text-xs font-semibold px-3.5 py-2 rounded-full shadow-md flex items-center gap-1.5 hover:bg-crema transition-colors"
+        className="absolute top-24 right-5 sm:top-28 sm:right-8 z-20 bg-crema/95 text-[#151513] text-xs font-semibold px-3.5 py-2 rounded-full shadow-md flex items-center gap-1.5 hover:bg-crema transition-colors"
       >
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
           <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="M21 15l-5-5L5 21" />
@@ -60,8 +60,7 @@ export default function Hero() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="relative z-10 container-cw pb-14 sm:pb-16 lg:pb-20 pt-32"
       >
-        <span className="eyebrow !text-[#D8D3C4]">{t.hero.badge}</span>
-        <h1 className="font-serif font-semibold text-[10vw] sm:text-5xl lg:text-6xl leading-[1.08] max-w-2xl mt-3 text-crema">
+        <h1 className="font-serif font-semibold text-[10vw] sm:text-5xl lg:text-6xl leading-[1.08] max-w-2xl text-crema">
           {t.hero.titleLine1}
           <br />
           <em className="italic text-amarillo">{t.hero.titleEm}</em>
