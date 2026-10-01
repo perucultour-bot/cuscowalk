@@ -14,7 +14,7 @@ export default function Faq() {
         </div>
         <div className="max-w-2xl">
           {t.faq.items.map((f, i) => (
-            <div key={f.q} className="border-b border-piedra-200 dark:border-negro-800">
+            <div key={i} className="border-b border-piedra-200 dark:border-negro-800">
               <button onClick={() => setOpenIdx(openIdx === i ? null : i)} className="w-full text-left flex justify-between items-center gap-5 py-5 font-serif text-lg">
                 {f.q}
                 <span className="flex-none">{openIdx === i ? "−" : "+"}</span>

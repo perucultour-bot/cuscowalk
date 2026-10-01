@@ -27,8 +27,8 @@ export default function TraditionalTours() {
               <h3 className="font-serif text-xl mt-2">{tour.name[lang]}</h3>
               <p className="text-sm text-piedra mt-3 flex-1">{tour.description[lang]}</p>
               <ul className="mt-4 space-y-1.5">
-                {tour.highlights[lang].map((h) => (
-                  <li key={h} className="text-xs flex items-start gap-2">
+                {tour.highlights[lang].map((h, hi) => (
+                  <li key={hi} className="text-xs flex items-start gap-2">
                     <span className="text-amarillo-600 dark:text-amarillo mt-0.5">●</span>
                     <span>{h}</span>
                   </li>

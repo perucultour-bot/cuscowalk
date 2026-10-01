@@ -62,3 +62,31 @@ body {
 .prose-cw img {
   @apply rounded my-6 w-full object-cover border border-piedra-200 dark:border-negro-800;
 }
+
+/* Carrusel liviano de las fotos chicas del mosaico del header */
+@keyframes heroCarA {
+  0%, 45% { opacity: 1; }
+  55%, 100% { opacity: 0; }
+}
+@keyframes heroCarB {
+  0%, 45% { opacity: 0; }
+  55%, 100% { opacity: 1; }
+}
+.hero-carousel-a {
+  animation: heroCarA 14s ease-in-out infinite;
+}
+.hero-carousel-b {
+  animation: heroCarB 14s ease-in-out infinite;
+}
+.hero-carousel-delay-0 { animation-delay: 0s; }
+.hero-carousel-delay-1 { animation-delay: 2.5s; }
+.hero-carousel-delay-2 { animation-delay: 5s; }
+.hero-carousel-delay-3 { animation-delay: 7.5s; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel-a, .hero-carousel-b {
+    animation: none !important;
+  }
+  .hero-carousel-b {
+    opacity: 0;
+  }
+}

@@ -17,8 +17,8 @@ export default function Contact() {
           <h2 className="mt-3 text-4xl lg:text-5xl">{t.contact.title}</h2>
         </div>
         <div className="grid sm:grid-cols-2 gap-5">
-          {cards.map((c) => (
-            <div key={c.h} className="border border-piedra-200 dark:border-negro-800 rounded p-6 bg-white dark:bg-negro-800 flex items-center gap-3">
+          {cards.map((c, i) => (
+            <div key={i} className="border border-piedra-200 dark:border-negro-800 rounded p-6 bg-white dark:bg-negro-800 flex items-center gap-3">
               {c.h === t.contact.wa && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src="/images/whatsapp-icon.png" alt="" className="w-8 h-8 flex-none" />

@@ -33,7 +33,7 @@ export default function About() {
         >
           {t.about.cards.map((card, i) => (
             <motion.div
-              key={card.h}
+              key={i}
               variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }}
               className={`border border-piedra-200 dark:border-negro-800 rounded p-6 hover:-translate-y-1 transition-transform bg-white dark:bg-negro-800 ${
                 i === 2 ? "col-span-2 flex items-center gap-4 !bg-negro !border-negro text-crema" : ""

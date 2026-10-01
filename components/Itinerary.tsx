@@ -1,11 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { useApp } from "./Providers";
 import { Scene } from "./Illustrations";
 
+const RouteMap = dynamic(() => import("./RouteMap"), {
+  ssr: false,
+  loading: () => <div className="h-[380px] lg:h-[440px] rounded-xl bg-piedra-200/40 dark:bg-negro-800 animate-pulse" />,
+});
+
 export default function Itinerary() {
-  const { t } = useApp();
+  const { t, lang } = useApp();
 
   return (
     <section id="itinerary" className="py-9 sm:py-16 lg:py-28">
@@ -23,7 +29,7 @@ export default function Itinerary() {
           />
           {t.itinerary.stops.map((stop, i) => (
             <motion.div
-              key={stop.t}
+              key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -49,6 +55,13 @@ export default function Itinerary() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-12">
+          <h3 className="font-serif text-xl mb-4">
+            {lang === "es" ? "Así se ve el recorrido" : "Here's what the route looks like"}
+          </h3>
+          <RouteMap lang={lang} />
         </div>
       </div>
     </section>

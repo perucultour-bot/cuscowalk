@@ -28,12 +28,26 @@ function AnimatedCounter({ target }: { target: number }) {
 }
 
 // Mosaico de fotos del encabezado — chicas, livianas, y clicables (llevan a la Galería).
-const HERO_PHOTOS = [
-  { src: "/images/mirador-plaza-armas.webp", alt: "Turistas fotografiando la Plaza de Armas desde el mirador" },
-  { src: "/images/plaza-de-armas-atardecer.webp", alt: "Plaza de Armas de Cusco" },
-  { src: "/images/qorikancha-panoramica.webp", alt: "Qorikancha" },
-  { src: "/images/hatun-rumiyoq-muro.webp", alt: "Calle Hatun Rumiyoq" },
-  { src: "/images/san-blas-callejon-escaleras.webp", alt: "Barrio de San Blas" },
+const HERO_MAIN = { src: "/images/mirador-plaza-armas.webp", alt: "Turistas fotografiando la Plaza de Armas desde el mirador" };
+
+// Cada foto chica alterna entre dos opciones (carrusel liviano, sin afectar la foto grande).
+const HERO_SMALL: { a: { src: string; alt: string }; b: { src: string; alt: string } }[] = [
+  {
+    a: { src: "/images/plaza-de-armas-atardecer.webp", alt: "Plaza de Armas de Cusco" },
+    b: { src: "/images/cusco-atardecer-plaza.webp", alt: "Cusco al anochecer" },
+  },
+  {
+    a: { src: "/images/qorikancha-panoramica.webp", alt: "Qorikancha" },
+    b: { src: "/images/qorikancha-atardecer.webp", alt: "Qorikancha al atardecer" },
+  },
+  {
+    a: { src: "/images/hatun-rumiyoq-muro.webp", alt: "Calle Hatun Rumiyoq" },
+    b: { src: "/images/huaca-muro-inca.webp", alt: "Muro inca de una huaca" },
+  },
+  {
+    a: { src: "/images/san-blas-callejon-escaleras.webp", alt: "Barrio de San Blas" },
+    b: { src: "/images/escaleras-cafe-san-blas.webp", alt: "Cafés en las escaleras de San Blas" },
+  },
 ];
 
 export default function Hero() {
@@ -47,22 +61,36 @@ export default function Hero() {
           <div className="hidden md:grid grid-cols-4 grid-rows-2 gap-2 h-[360px] lg:h-[420px]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={HERO_PHOTOS[0].src}
-              alt={HERO_PHOTOS[0].alt}
+              src={HERO_MAIN.src}
+              alt={HERO_MAIN.alt}
               className="col-span-2 row-span-2 w-full h-full object-cover object-[center_42%] group-hover:brightness-[.94] transition-[filter]"
               fetchPriority="high"
               loading="eager"
             />
-            {HERO_PHOTOS.slice(1).map((p) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img key={p.src} src={p.src} alt={p.alt} loading="lazy" className="w-full h-full object-cover group-hover:brightness-[.94] transition-[filter]" />
+            {HERO_SMALL.map((pair, i) => (
+              <div key={i} className="relative w-full h-full overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={pair.a.src}
+                  alt={pair.a.alt}
+                  loading="lazy"
+                  className={`hero-carousel-a hero-carousel-delay-${i} absolute inset-0 w-full h-full object-cover group-hover:brightness-[.94] transition-[filter]`}
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={pair.b.src}
+                  alt={pair.b.alt}
+                  loading="lazy"
+                  className={`hero-carousel-b hero-carousel-delay-${i} absolute inset-0 w-full h-full object-cover group-hover:brightness-[.94] transition-[filter]`}
+                />
+              </div>
             ))}
           </div>
           {/* Versión móvil: solo la foto principal */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={HERO_PHOTOS[0].src}
-            alt={HERO_PHOTOS[0].alt}
+            src={HERO_MAIN.src}
+            alt={HERO_MAIN.alt}
             className="md:hidden w-full h-64 object-cover object-[center_42%] rounded-xl"
             fetchPriority="high"
             loading="eager"
@@ -89,6 +117,13 @@ export default function Hero() {
             <em className="italic text-[#8A6800] dark:text-amarillo">{t.hero.titleEm}</em>
           </h1>
           <p className="mt-6 text-lg max-w-md text-piedra">{t.hero.sub}</p>
+          <div className="flex flex-wrap gap-2 mt-5">
+            {t.hero.tags.map((tag, i) => (
+              <span key={i} className="text-[11px] font-semibold uppercase tracking-wide px-3 py-1.5 rounded-full border border-piedra-200 dark:border-white/20 text-piedra">
+                {tag}
+              </span>
+            ))}
+          </div>
           <div className="flex gap-3.5 mt-10 flex-wrap">
             <a href="#booking" className="btn btn-primary">{t.hero.cta1}</a>
             <a href="#itinerary" className="btn border border-piedra-200 dark:border-white/35">{t.hero.cta2}</a>

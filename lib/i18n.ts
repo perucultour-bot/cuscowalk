@@ -5,6 +5,7 @@ export const dictionary = {
     nav: { about: "Sobre el Tour", itinerary: "Itinerario", schedule: "Horarios", gallery: "Galería", reviews: "Opiniones", faq: "Preguntas", contact: "Contacto", book: "Reservar Gratis", tours: "Otros Tours" },
     hero: {
       badge: "★ Free Walking Tour #1 en Cusco",
+      tags: ["Historia", "Arquitectura Inca", "Cultura Viva", "100% Gratis"],
       titleLine1: "Únete al mejor Walking Tour de Cusco y",
       titleEm: "vive su historia en cada paso",
       sub: "Explora la ciudad con nuestros guías locales y vive una experiencia auténtica, totalmente gratuita.",
@@ -113,6 +114,7 @@ export const dictionary = {
     nav: { about: "About the Tour", itinerary: "Itinerary", schedule: "Schedule", gallery: "Gallery", reviews: "Reviews", faq: "FAQ", contact: "Contact", book: "Book Free Now", tours: "Other Tours" },
     hero: {
       badge: "★ Free Walking Tour #1 in Cusco",
+      tags: ["History", "Inca Architecture", "Living Culture", "100% Free"],
       titleLine1: "Join the Best Walking Tour in Cusco and",
       titleEm: "Live Its History in Every Step",
       sub: "Explore the city with our local guides and experience something authentic — completely free.",
