@@ -42,7 +42,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setLang(lang === "es" ? "en" : "es")}
-              className="font-mono text-sm border border-piedra-200 rounded-full flex overflow-hidden"
+              className="font-mono text-xs border border-piedra-200 rounded-full flex overflow-hidden"
               aria-label="Cambiar idioma"
             >
               <span className={`flex items-center gap-1.5 px-2.5 py-1.5 ${lang === "es" ? "bg-negro text-crema dark:bg-crema dark:text-negro" : ""}`}>🇪🇸 ES</span>
