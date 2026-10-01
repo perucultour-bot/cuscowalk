@@ -12,6 +12,7 @@ const bookingSchema = z.object({
   phone: z.string().trim().max(30).optional().or(z.literal("")),
   date: z.string().refine((d) => !Number.isNaN(Date.parse(d)), "Fecha inválida"),
   time: z.enum(["10:30 AM", "1:00 PM", "3:30 PM"]),
+  tourLanguage: z.enum(["es", "en"]),
   people: z.coerce.number().int().min(1).max(20),
 });
 
@@ -65,7 +66,7 @@ export async function POST(req: NextRequest) {
       resend.emails.send({
         from: fromEmail,
         to: companyEmail,
-        subject: `Nueva reserva — ${booking.firstName} ${booking.lastName} (${booking.date}, ${booking.time})`,
+        subject: `Nueva reserva [${booking.tourLanguage.toUpperCase()}] — ${booking.firstName} ${booking.lastName} (${booking.date}, ${booking.time})`,
         html: companyNotificationEmail(booking),
       }),
       resend.emails.send({

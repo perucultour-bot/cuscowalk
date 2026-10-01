@@ -6,6 +6,7 @@ type BookingData = {
   date: string;
   time: string;
   people: number;
+  tourLanguage: "es" | "en";
 };
 
 const wrapper = (title: string, body: string) => `
@@ -37,12 +38,14 @@ const wrapper = (title: string, body: string) => `
 </html>`;
 
 export function customerConfirmationEmail(b: BookingData) {
+  const langLabel = b.tourLanguage === "en" ? "English 🇬🇧" : "Español 🇪🇸";
   const body = `
     <p>Hola ${b.firstName},</p>
     <p>¡Gracias por reservar tu Free Walking Tour con Cusco Walk! Tu reserva ha sido confirmada.</p>
     <table style="width:100%;border-collapse:collapse;margin:20px 0;">
       <tr><td style="padding:8px 0;color:#7C7669;">Fecha</td><td style="padding:8px 0;text-align:right;font-weight:bold;">${b.date}</td></tr>
       <tr><td style="padding:8px 0;color:#7C7669;border-top:1px dashed #D8D2C4;">Hora</td><td style="padding:8px 0;text-align:right;font-weight:bold;border-top:1px dashed #D8D2C4;">${b.time}</td></tr>
+      <tr><td style="padding:8px 0;color:#7C7669;border-top:1px dashed #D8D2C4;">Idioma del tour</td><td style="padding:8px 0;text-align:right;font-weight:bold;border-top:1px dashed #D8D2C4;">${langLabel}</td></tr>
       <tr><td style="padding:8px 0;color:#7C7669;border-top:1px dashed #D8D2C4;">Participantes</td><td style="padding:8px 0;text-align:right;font-weight:bold;border-top:1px dashed #D8D2C4;">${b.people}</td></tr>
     </table>
     <p><strong>Punto de encuentro:</strong> Plaza de Armas de Cusco, junto a la Fuente Inca.</p>
@@ -55,6 +58,7 @@ export function customerConfirmationEmail(b: BookingData) {
 }
 
 export function companyNotificationEmail(b: BookingData) {
+  const langLabel = b.tourLanguage === "en" ? "INGLÉS 🇬🇧" : "ESPAÑOL 🇪🇸";
   const body = `
     <p>Nueva reserva recibida a través del sitio web:</p>
     <table style="width:100%;border-collapse:collapse;margin:20px 0;">
@@ -63,6 +67,7 @@ export function companyNotificationEmail(b: BookingData) {
       <tr><td style="padding:8px 0;color:#7C7669;border-top:1px dashed #D8D2C4;">WhatsApp</td><td style="padding:8px 0;text-align:right;font-weight:bold;border-top:1px dashed #D8D2C4;">${b.phone || "—"}</td></tr>
       <tr><td style="padding:8px 0;color:#7C7669;border-top:1px dashed #D8D2C4;">Fecha</td><td style="padding:8px 0;text-align:right;font-weight:bold;border-top:1px dashed #D8D2C4;">${b.date}</td></tr>
       <tr><td style="padding:8px 0;color:#7C7669;border-top:1px dashed #D8D2C4;">Hora</td><td style="padding:8px 0;text-align:right;font-weight:bold;border-top:1px dashed #D8D2C4;">${b.time}</td></tr>
+      <tr><td style="padding:8px 0;background:#FFF6D0;color:#151513;border-top:1px dashed #D8D2C4;"><strong>Idioma del tour</strong></td><td style="padding:8px 0;text-align:right;font-weight:bold;background:#FFF6D0;border-top:1px dashed #D8D2C4;">${langLabel}</td></tr>
       <tr><td style="padding:8px 0;color:#7C7669;border-top:1px dashed #D8D2C4;">Participantes</td><td style="padding:8px 0;text-align:right;font-weight:bold;border-top:1px dashed #D8D2C4;">${b.people}</td></tr>
       <tr><td style="padding:8px 0;color:#7C7669;border-top:1px dashed #D8D2C4;">Recibido</td><td style="padding:8px 0;text-align:right;font-weight:bold;border-top:1px dashed #D8D2C4;">${new Date().toLocaleString("es-PE", { timeZone: "America/Lima" })}</td></tr>
     </table>

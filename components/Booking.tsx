@@ -6,15 +6,13 @@ import { UmbrellaIcon } from "./Illustrations";
 
 type FormState = {
   firstName: string; lastName: string; email: string; phone: string;
-  date: string; time: string; people: number;
+  date: string; time: string; people: number; tourLanguage: "es" | "en";
 };
 type Errors = Partial<Record<keyof FormState, string>>;
 
-const initialForm: FormState = { firstName: "", lastName: "", email: "", phone: "", date: "", time: "", people: 1 };
-
 export default function Booking({ prefillSlot }: { prefillSlot: string | null }) {
   const { t, lang } = useApp();
-  const [form, setForm] = useState<FormState>(initialForm);
+  const [form, setForm] = useState<FormState>({ firstName: "", lastName: "", email: "", phone: "", date: "", time: "", people: 1, tourLanguage: lang });
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
   const todayISO = new Date().toISOString().split("T")[0];
@@ -54,7 +52,7 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
   }
 
   function reset() {
-    setForm(initialForm);
+    setForm({ firstName: "", lastName: "", email: "", phone: "", date: "", time: "", people: 1, tourLanguage: lang });
     setErrors({});
     setStatus("idle");
   }
@@ -71,6 +69,7 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
             [t.booking.email, form.email],
             [t.booking.date, form.date],
             [t.booking.time, form.time],
+            [t.booking.tourLang, form.tourLanguage === "es" ? t.booking.tourLangEs : t.booking.tourLangEn],
             [t.booking.people, form.people],
           ].map(([label, val]) => (
             <div key={label as string} className="flex justify-between py-2 border-b border-dashed border-piedra-200 last:border-none">
@@ -135,6 +134,14 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
             <option value="3:30 PM">3:30 PM</option>
           </select>
           {errors.time && <span className="text-xs text-red-600">{errors.time}</span>}
+        </div>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-xs font-semibold">{t.booking.tourLang}</label>
+          <select className="border rounded px-3.5 py-3 bg-white dark:bg-negro-800 text-[#151513] dark:text-crema border-piedra-200 dark:border-negro-800"
+            value={form.tourLanguage} onChange={(e) => setForm({ ...form, tourLanguage: e.target.value as "es" | "en" })}>
+            <option value="es">🇪🇸 {t.booking.tourLangEs}</option>
+            <option value="en">🇬🇧 {t.booking.tourLangEn}</option>
+          </select>
         </div>
         <div className="flex flex-col gap-1.5 sm:col-span-2">
           <label className="text-xs font-semibold">{t.booking.people}</label>
