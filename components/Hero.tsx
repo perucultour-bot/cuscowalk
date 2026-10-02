@@ -32,12 +32,15 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-end overflow-hidden">
-      <div className="absolute inset-0 z-0 bg-negro">
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#3a3024] via-[#1c1912] to-negro">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/plaza-de-armas-atardecer.webp"
+          srcSet="/images/plaza-de-armas-atardecer-mobile.webp 900w, /images/plaza-de-armas-atardecer.webp 2400w"
+          sizes="100vw"
           alt="Plaza de Armas de Cusco al atardecer"
-          className="w-full h-full object-cover object-[68%_55%] sm:object-[center_58%]"
+          className="w-full h-full object-cover object-[68%_55%] sm:object-[center_58%] opacity-0 transition-opacity duration-700"
+          onLoad={(e) => e.currentTarget.classList.remove("opacity-0")}
           fetchPriority="high"
           loading="eager"
         />
