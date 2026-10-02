@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { useApp } from "./Providers";
-import { UmbrellaIcon } from "./Illustrations";
 
 type FormState = {
   firstName: string; lastName: string; email: string; phone: string;
@@ -12,6 +12,7 @@ type Errors = Partial<Record<keyof FormState, string>>;
 
 export default function Booking({ prefillSlot }: { prefillSlot: string | null }) {
   const { t, lang } = useApp();
+  const router = useRouter();
   const [form, setForm] = useState<FormState>({ firstName: "", lastName: "", email: "", phone: "", date: "", time: "", people: 1, tourLanguage: lang });
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
@@ -45,46 +46,17 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("request failed");
-      setStatus("done");
+      const q = new URLSearchParams({
+        name: `${form.firstName} ${form.lastName}`.trim(),
+        date: form.date,
+        time: form.time,
+        people: String(form.people),
+        tourLanguage: form.tourLanguage,
+      });
+      router.push(`/gracias?${q.toString()}`);
     } catch {
       setStatus("error");
     }
-  }
-
-  function reset() {
-    setForm({ firstName: "", lastName: "", email: "", phone: "", date: "", time: "", people: 1, tourLanguage: lang });
-    setErrors({});
-    setStatus("idle");
-  }
-
-  if (status === "done") {
-    return (
-      <div className="bg-crema dark:bg-negro-soft text-[#151513] dark:text-crema rounded p-9 shadow-2xl text-center">
-        <div className="w-14 h-14 rounded-full bg-amarillo text-negro flex items-center justify-center mx-auto mb-5">✓</div>
-        <h3 className="font-serif text-2xl">{t.booking.confirmTitle}</h3>
-        <p className="text-piedra mt-2">{t.booking.confirmLead}</p>
-        <div className="text-left bg-white dark:bg-negro-800 text-[#151513] dark:text-crema border border-piedra-200 dark:border-negro-800 rounded p-5 mt-6 text-sm">
-          {[
-            [t.booking.first, `${form.firstName} ${form.lastName}`],
-            [t.booking.email, form.email],
-            [t.booking.date, form.date],
-            [t.booking.time, form.time],
-            [t.booking.tourLang, form.tourLanguage === "es" ? t.booking.tourLangEs : t.booking.tourLangEn],
-            [t.booking.people, form.people],
-          ].map(([label, val]) => (
-            <div key={label as string} className="flex justify-between py-2 border-b border-dashed border-piedra-200 last:border-none">
-              <span className="text-piedra">{label}</span>
-              <span className="font-semibold">{val}</span>
-            </div>
-          ))}
-        </div>
-        <div className="flex gap-3 items-center bg-negro text-crema rounded p-4 mt-5 text-left">
-          <UmbrellaIcon className="w-6 h-6 text-amarillo flex-none" />
-          <p className="text-sm text-[#D8D3C4]">{t.booking.confirmUmbrella}</p>
-        </div>
-        <button onClick={reset} className="btn btn-ghost mt-6">{t.booking.another}</button>
-      </div>
-    );
   }
 
   const field = (key: keyof FormState) => errors[key] ? "border-red-500" : "border-piedra-200 dark:border-negro-800";
