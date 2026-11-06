@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -13,7 +13,13 @@ function GraciasContent() {
   const { t, lang } = useApp();
   const params = useSearchParams();
 
-  const name = params.get("name") || "";
+  // El nombre se lee del navegador (sessionStorage), no de la URL.
+  const [name, setName] = useState("");
+  useEffect(() => {
+    try {
+      setName(sessionStorage.getItem("cw_booking_name") || "");
+    } catch {}
+  }, []);
   const date = params.get("date") || "";
   const time = params.get("time") || "";
   const people = params.get("people") || "";

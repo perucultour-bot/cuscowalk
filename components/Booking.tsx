@@ -46,8 +46,12 @@ export default function Booking({ prefillSlot }: { prefillSlot: string | null })
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("request failed");
+      // El nombre NO va en la URL (Google Analytics guarda la URL completa y
+      // no se deben enviar datos personales). Se guarda solo en esta pestaña.
+      try {
+        sessionStorage.setItem("cw_booking_name", `${form.firstName} ${form.lastName}`.trim());
+      } catch {}
       const q = new URLSearchParams({
-        name: `${form.firstName} ${form.lastName}`.trim(),
         date: form.date,
         time: form.time,
         people: String(form.people),
